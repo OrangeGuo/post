@@ -3,7 +3,7 @@
 #+SETUPFILE: ~/blog/setupfile.org
 #+JEKYLL_LAYOUT: post
 #+JEKYLL_CATEGORIES: notes 
-#+JEKYLL_TAGS: 
+#+JEKYLL_TAGS: exam
 #+JEKYLL_PUBLISHED: true
 
 * 计算机网络概论

@@ -1,0 +1,534 @@
+---
+title: "ubuntu手册"
+date: 2018-02-26
+layout: post
+categories: 
+- ubuntu
+tags: 
+- tutorial
+published: true
+comments: 
+---
+
+<div id="outline-container-orgdfc62ae" class="outline-2">
+<h2 id="orgdfc62ae">ubuntu tips</h2>
+<div class="outline-text-2" id="text-orgdfc62ae">
+</div>
+<div id="outline-container-orgbbf58f7" class="outline-3">
+<h3 id="orgbbf58f7">nice applications</h3>
+<div class="outline-text-3" id="text-orgbbf58f7">
+<ol class="org-ol">
+<li>plank:bottom bar</li>
+<li>oh my zsh:beautiful shell</li>
+<li>editors:vim and emacs(nothing compare)</li>
+<li>lantern:free and quick VPN</li>
+<li>toolbars:indicator-sysmonitor(show memory and cpu)</li>
+</ol>
+<pre class="example">
+sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
+sudo apt-get update
+sudo apt-get install indicator-sysmonitor
+</pre>
+<ol class="org-ol">
+<li>switch graphic card:prime-indicator</li>
+</ol>
+<pre class="example">
+sudo add-apt-repository ppa:nilarimogard/webupd8  
+sudo apt update
+sudo apt install prime-indicator
+</pre>
+<ol class="org-ol">
+<li>theme and icons</li>
+</ol>
+<pre class="example">
+sudo add-apt-repository ppa:noobslab/themes
+sudo add-apt-repository ppa:numix/ppa
+sudo apt update
+sudo apt install numix-gtk-theme numix-icon-theme-circle flatabulous-theme
+</pre>
+</div>
+</div>
+<div id="outline-container-orge45ca34" class="outline-3">
+<h3 id="orge45ca34">important command</h3>
+<div class="outline-text-3" id="text-orge45ca34">
+</div>
+<div id="outline-container-org22f8e4e" class="outline-4">
+<h4 id="org22f8e4e">list all applications</h4>
+<div class="outline-text-4" id="text-org22f8e4e">
+<pre class="example">
+dpkg -l(list all apps in you system)
+dpkg -l|grep indicator(find app_name contain indicator)
+</pre>
+</div>
+</div>
+<div id="outline-container-org3b3afa8" class="outline-4">
+<h4 id="org3b3afa8">connected to internet</h4>
+<div class="outline-text-4" id="text-org3b3afa8">
+<pre class="example">
+sudo pon dsl-provider(connected)
+sudo poff dsl-provider(unconnected)
+</pre>
+<p>
+(warning:but i have renamed dsl-provider to cn,which means chinanet)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8dc9baf" class="outline-3">
+<h3 id="org8dc9baf">apt repository</h3>
+<div class="outline-text-3" id="text-org8dc9baf">
+<img src="/images/ubuntu01.png" alt="Drawing" width="400px" />
+</div>
+</div>
+<div id="outline-container-orga379c49" class="outline-3">
+<h3 id="orga379c49">findings</h3>
+<div class="outline-text-3" id="text-orga379c49">
+</div>
+<ul class="org-ul">
+<li><a id="orgdb34487"></a>change logo left of top<br />
+<div class="outline-text-5" id="text-orgdb34487">
+<p>
+/usr/share/locate/en/LC<sub>MESSAGES</sub>/unity.mo
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1042e1e" class="outline-2">
+<h2 id="org1042e1e">editors</h2>
+<div class="outline-text-2" id="text-org1042e1e">
+</div>
+<div id="outline-container-orgb858037" class="outline-3">
+<h3 id="orgb858037">Vim</h3>
+<div class="outline-text-3" id="text-orgb858037">
+</div>
+<div id="outline-container-orgacd48e6" class="outline-4">
+<h4 id="orgacd48e6">key bindings</h4>
+<div class="outline-text-4" id="text-orgacd48e6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">hjkl</td>
+<td class="org-left">direction</td>
+</tr>
+
+<tr>
+<td class="org-left">0</td>
+<td class="org-left">line head</td>
+</tr>
+
+<tr>
+<td class="org-left">$</td>
+<td class="org-left">line tail</td>
+</tr>
+
+<tr>
+<td class="org-left">dw</td>
+<td class="org-left">delete word</td>
+</tr>
+
+<tr>
+<td class="org-left">daw</td>
+<td class="org-left">delete cursor word</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga884ad9" class="outline-4">
+<h4 id="orga884ad9">common commands</h4>
+<div class="outline-text-4" id="text-orga884ad9">
+</div>
+<ul class="org-ul">
+<li><a id="org7078ac7"></a>find and replace<br />
+<div class="outline-text-5" id="text-org7078ac7">
+<pre class="example">
+all buffer  :%s/old/new/g "g" means without confirm ("c" need confirm one by one)
+current line  :s/old/new/g 
+line n1 to n2  :n1,n2s/old/new/g  
+</pre>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgc8e704d" class="outline-4">
+<h4 id="orgc8e704d">use of marks</h4>
+<div class="outline-text-4" id="text-orgc8e704d">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">commands</th>
+<th scope="col" class="org-left">note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">mx</td>
+<td class="org-left">set mark 'x'</td>
+</tr>
+
+<tr>
+<td class="org-left">'x</td>
+<td class="org-left">jump to mark 'x'</td>
+</tr>
+
+<tr>
+<td class="org-left">:marks</td>
+<td class="org-left">list all mark</td>
+</tr>
+
+<tr>
+<td class="org-left">:delmarks</td>
+<td class="org-left">del one mark</td>
+</tr>
+
+<tr>
+<td class="org-left">:delmarks!</td>
+<td class="org-left">del all marks</td>
+</tr>
+</tbody>
+</table>
+<p>
+<b>tips</b>
+example:delmarks a to delete mark "a"
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5ca9251" class="outline-3">
+<h3 id="org5ca9251">Emacs</h3>
+<div class="outline-text-3" id="text-org5ca9251">
+</div>
+<div id="outline-container-orgf895cf5" class="outline-4">
+<h4 id="orgf895cf5">common commands</h4>
+<div class="outline-text-4" id="text-orgf895cf5">
+</div>
+<ul class="org-ul">
+<li><a id="org4353573"></a>enable/disable grammar check :space+t+S<br /></li>
+<li><a id="orgc09548a"></a>save the buffer: space+f+s<br /></li>
+<li><a id="org6b2bc0c"></a>split the window: space+w+//-(right or below)<br /></li>
+<li><a id="org2dff519"></a>list git log: space+g+s(press ENTER to see details)<br /></li>
+<li><a id="orge73026b"></a>commit : space+g+m+c(more options for tutorials),C-c C-c to submit and C-c C-k to cancle<br /></li>
+<li><a id="org5c51e0f"></a>find file or touch a file: space+f+f<br /></li>
+<li><a id="org7b108ff"></a>exec multi commands: C+number<br /></li>
+<li><a id="orgb4f887f"></a>find definition of function in emacs :C+h+f(or v for varies)<br /></li>
+</ul>
+</div>
+<div id="outline-container-org4babf47" class="outline-4">
+<h4 id="org4babf47">dired mode</h4>
+<div class="outline-text-4" id="text-org4babf47">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> key bindings</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">key</th>
+<th scope="col" class="org-left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">d</td>
+<td class="org-left">mark items to delete</td>
+</tr>
+
+<tr>
+<td class="org-left">c</td>
+<td class="org-left">copy items</td>
+</tr>
+
+<tr>
+<td class="org-left">R</td>
+<td class="org-left">rename items</td>
+</tr>
+
+<tr>
+<td class="org-left">D</td>
+<td class="org-left">delete items</td>
+</tr>
+
+<tr>
+<td class="org-left">u</td>
+<td class="org-left">cancle marks</td>
+</tr>
+
+<tr>
+<td class="org-left">x</td>
+<td class="org-left">deal with marked items</td>
+</tr>
+</tbody>
+</table>
+<p>
+<b>tips</b>:press space f j to dired mode 
+</p>
+</div>
+</div>
+<div id="outline-container-org2792caa" class="outline-4">
+<h4 id="org2792caa">org agenda</h4>
+<div class="outline-text-4" id="text-org2792caa">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 2:</span> agenda key bindings</caption>
+
+<colgroup>
+<col  class="org-center" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-center">key</th>
+<th scope="col" class="org-right">note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-center">+</td>
+<td class="org-right">change priority</td>
+</tr>
+
+<tr>
+<td class="org-center">t</td>
+<td class="org-right">change state</td>
+</tr>
+
+<tr>
+<td class="org-center">i</td>
+<td class="org-right">write diary</td>
+</tr>
+
+<tr>
+<td class="org-center">z</td>
+<td class="org-right">take note</td>
+</tr>
+
+<tr>
+<td class="org-center">,.</td>
+<td class="org-right">show menus</td>
+</tr>
+
+<tr>
+<td class="org-center">,</td>
+<td class="org-right">more options</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="org-ul">
+<li><a id="org279bd29"></a>press L for log (R for clock) on weekly or daily agenda view<br />
+<div class="outline-text-5" id="text-org279bd29">
+<p>
+<b>Tips</b>
+agenda select task and press I to start timer(or O to stop timer) 
+</p>
+<img src="/images/ubuntu02.png" alt="Drawing" width="400px" />
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org2220515" class="outline-4">
+<h4 id="org2220515">org mode</h4>
+<div class="outline-text-4" id="text-org2220515">
+</div>
+<ul class="org-ul">
+<li><a id="org6a30afc"></a>export to pdf html and so on<br />
+<div class="outline-text-5" id="text-org6a30afc">
+<p>
+C-c C-e 
+</p>
+</div>
+</li>
+<li><a id="orga2623ee"></a>ctrl + ENTER<br />
+<div class="outline-text-5" id="text-orga2623ee">
+<p>
+<b>在分级标题中使用此快捷键可以新建同级标题</b>
+</p>
+</div>
+</li>
+<li><a id="orga6fb673"></a>org-indent-mode<br /></li>
+</ul>
+</div>
+<div id="outline-container-org2841742" class="outline-4">
+<h4 id="org2841742">better configs</h4>
+<div class="outline-text-4" id="text-org2841742">
+</div>
+<ul class="org-ul">
+<li><a id="org3e86244"></a>启动meacs<br />
+<div class="outline-text-5" id="text-org3e86244">
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #7590db;">LC_CTYPE</span>=zh_CN.UTF-8 emacs
+</pre>
+</div>
+<p>
+<b>在终端以上命令启动emacs才能在emacs中启用搜狗输入法</b>
+</p>
+</div>
+</li>
+<li><a id="org08f22fd"></a>代码块中直接开启新的缓冲区编辑代码<br />
+<div class="outline-text-5" id="text-org08f22fd">
+<p>
+快捷键：C-c '（注：代码块需注明编程语言） 
+</p>
+</div>
+</li>
+<li><a id="org73a6452"></a>查看 emacs 中各函数CPU和内存占用<br />
+<div class="outline-text-5" id="text-org73a6452">
+<ul class="org-ul">
+<li>使用M-x调用 profiler-start启动监控</li>
+<li>然后调用 profiler-report 查看占用</li>
+<li>最后使用 profiler-stop 关闭监控</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc32a38f"></a>在 vim的insert模式下启用emacs原有按键<br />
+<div class="outline-text-5" id="text-orgc32a38f">
+<p>
+将spacemacs 按键风格设置为 hybrid 并按下SPC t E h即可在insert的模式启动emacs原生快捷键
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9a9caf6" class="outline-2">
+<h2 id="org9a9caf6">other</h2>
+<div class="outline-text-2" id="text-org9a9caf6">
+</div>
+<div id="outline-container-org63772c7" class="outline-3">
+<h3 id="org63772c7">MySql note for version 5.7</h3>
+<div class="outline-text-3" id="text-org63772c7">
+</div>
+<div id="outline-container-org119676a" class="outline-4">
+<h4 id="org119676a">start and stop</h4>
+<div class="outline-text-4" id="text-org119676a">
+<p>
+sudo service mysql status to check mysql's state(isActive)
+sudo service mysql start to start mysql
+sudo service mysql stop to stop mysql
+</p>
+</div>
+</div>
+<div id="outline-container-org96216f9" class="outline-4">
+<h4 id="org96216f9">login</h4>
+<div class="outline-text-4" id="text-org96216f9">
+<p>
+mysql -u username -p(+database)
+example: mysql -u root -p soft
+</p>
+</div>
+</div>
+<div id="outline-container-org3763d87" class="outline-4">
+<h4 id="org3763d87">forbidden startp</h4>
+<div class="outline-text-4" id="text-org3763d87">
+<pre class="example">
+sudo update-rc.d -f mysql remove
+</pre>
+</div>
+</div>
+<div id="outline-container-orgdbadef4" class="outline-4">
+<h4 id="orgdbadef4">common commands</h4>
+<div class="outline-text-4" id="text-orgdbadef4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">commands<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup></th>
+<th scope="col" class="org-left">notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">show databases</td>
+<td class="org-left">list all databases</td>
+</tr>
+
+<tr>
+<td class="org-left">create database target</td>
+<td class="org-left">create database target</td>
+</tr>
+
+<tr>
+<td class="org-left">drop database trash</td>
+<td class="org-left">delete database trash</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org5db5230" class="outline-3">
+<h3 id="org5db5230">lesson</h3>
+<div class="outline-text-3" id="text-org5db5230">
+</div>
+<div id="outline-container-org2a0f06d" class="outline-4">
+<h4 id="org2a0f06d">commands</h4>
+<div class="outline-text-4" id="text-org2a0f06d">
+</div>
+<ul class="org-ul">
+<li><a id="orgabc972e"></a>rar x target.rar for unrar target.rar<br /></li>
+<li><a id="org39215e4"></a>rar a target.rar file for add file to target.rar<br /></li>
+</ul>
+</div>
+<div id="outline-container-orga405093" class="outline-4">
+<h4 id="orga405093">grub windows in ubuntu16</h4>
+<div class="outline-text-4" id="text-orga405093">
+<img src="/images/ubuntu03.png" alt="Drawing" width="400px" />
+</div>
+</div>
+</div>
+<div id="outline-container-org0c068f7" class="outline-3">
+<h3 id="org0c068f7">ssh</h3>
+<div class="outline-text-3" id="text-org0c068f7">
+<img src="/images/ubuntu04.png" alt="Drawing" width="400px" />
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+all commands must end with ';' !
+</p></div></div>
+
+
+</div>
+</div>

@@ -1,0 +1,171 @@
+#+TITLE: ubuntu手册 
+#+DATE: 2018-02-26
+#+SETUPFILE: ~/blog/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: ubuntu
+#+JEKYLL_TAGS: tutorial 
+#+JEKYLL_PUBLISHED: true
+
+* ubuntu tips 
+** nice applications
+1. plank:bottom bar
+2. oh my zsh:beautiful shell
+3. editors:vim and emacs(nothing compare)
+4. lantern:free and quick VPN
+5. toolbars:indicator-sysmonitor(show memory and cpu)
+#+BEGIN_SRC 
+sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
+sudo apt-get update
+sudo apt-get install indicator-sysmonitor
+#+END_SRC 
+6. switch graphic card:prime-indicator
+#+BEGIN_SRC 
+sudo add-apt-repository ppa:nilarimogard/webupd8  
+sudo apt update
+sudo apt install prime-indicator
+#+END_SRC
+7. theme and icons
+#+BEGIN_SRC 
+sudo add-apt-repository ppa:noobslab/themes
+sudo add-apt-repository ppa:numix/ppa
+sudo apt update
+sudo apt install numix-gtk-theme numix-icon-theme-circle flatabulous-theme
+#+END_SRC
+** important command
+*** list all applications
+#+BEGIN_SRC 
+dpkg -l(list all apps in you system)
+dpkg -l|grep indicator(find app_name contain indicator)
+#+END_SRC
+*** connected to internet 
+#+BEGIN_SRC 
+sudo pon dsl-provider(connected)
+sudo poff dsl-provider(unconnected)
+#+END_SRC
+(warning:but i have renamed dsl-provider to cn,which means chinanet)
+** apt repository 
+#+BEGIN_EXPORT html
+<img src="/images/ubuntu01.png" alt="Drawing" width="400px" />
+#+END_EXPORT
+** findings 
+**** change logo left of top
+/usr/share/locate/en/LC_MESSAGES/unity.mo
+* editors 
+** Vim
+*** key bindings 
+| key  | function           |
+|------+--------------------|
+| hjkl | direction          |
+| 0    | line head          |
+| $    | line tail          |
+| dw   | delete word        |
+| daw  | delete cursor word |
+|      |                    |
+*** common commands
+**** find and replace
+     #+BEGIN_SRC 
+ all buffer  :%s/old/new/g "g" means without confirm ("c" need confirm one by one)
+ current line  :s/old/new/g 
+ line n1 to n2  :n1,n2s/old/new/g  
+     #+END_SRC
+*** use of marks 
+| commands   | note             |
+|------------+------------------|
+| mx         | set mark 'x'     |
+| 'x         | jump to mark 'x' |
+| :marks     | list all mark    |
+| :delmarks  | del one mark     |
+| :delmarks! | del all marks    |
+*tips*
+example:delmarks a to delete mark "a"
+
+** Emacs 
+*** common commands 
+**** enable/disable grammar check :space+t+S
+**** save the buffer: space+f+s
+**** split the window: space+w+//-(right or below)
+**** list git log: space+g+s(press ENTER to see details)
+**** commit : space+g+m+c(more options for tutorials),C-c C-c to submit and C-c C-k to cancle
+**** find file or touch a file: space+f+f
+**** exec multi commands: C+number
+**** find definition of function in emacs :C+h+f(or v for varies)
+*** dired mode 
+#+caption: key bindings
+| key | description            |
+|-----+------------------------|
+| d   | mark items to delete   |
+| c   | copy items             |
+| R   | rename items           |
+| D   | delete items           |
+| u   | cancle marks           |
+| x   | deal with marked items |
+*tips*:press space f j to dired mode 
+*** org agenda
+#+caption: agenda key bindings
+| key |            note |
+|-----+-----------------|
+| <c> |             <r> |
+| +   | change priority |
+| t   |    change state |
+| i   |     write diary |
+| z   |       take note |
+| ,.  |      show menus |
+| ,   |    more options |
+****  press L for log (R for clock) on weekly or daily agenda view 
+*Tips*
+agenda select task and press I to start timer(or O to stop timer) 
+#+BEGIN_EXPORT html
+<img src="/images/ubuntu02.png" alt="Drawing" width="400px" />
+#+END_EXPORT
+*** org mode
+**** export to pdf html and so on
+C-c C-e 
+**** ctrl + ENTER 
+*在分级标题中使用此快捷键可以新建同级标题*
+**** org-indent-mode 
+*** better configs
+**** 启动meacs
+#+BEGIN_SRC shell
+  LC_CTYPE=zh_CN.UTF-8 emacs
+#+END_SRC
+*在终端以上命令启动emacs才能在emacs中启用搜狗输入法*
+**** 代码块中直接开启新的缓冲区编辑代码 
+快捷键：C-c '（注：代码块需注明编程语言） 
+**** 查看 emacs 中各函数CPU和内存占用
+- 使用M-x调用 profiler-start启动监控
+- 然后调用 profiler-report 查看占用
+- 最后使用 profiler-stop 关闭监控
+**** 在 vim的insert模式下启用emacs原有按键
+将spacemacs 按键风格设置为 hybrid 并按下SPC t E h即可在insert的模式启动emacs原生快捷键
+* other
+** MySql note for version 5.7
+*** start and stop
+sudo service mysql status to check mysql's state(isActive)
+sudo service mysql start to start mysql
+sudo service mysql stop to stop mysql
+*** login
+mysql -u username -p(+database)
+example: mysql -u root -p soft
+*** forbidden startp 
+#+BEGIN_SRC 
+sudo update-rc.d -f mysql remove
+#+END_SRC
+*** common commands 
+| commands[fn:1]         | notes                  |
+|------------------------+------------------------|
+| show databases         | list all databases     |
+| create database target | create database target |
+| drop database trash    | delete database trash  |
+[fn:1] all commands must end with ';' !
+** lesson 
+*** commands
+**** rar x target.rar for unrar target.rar
+**** rar a target.rar file for add file to target.rar 
+*** grub windows in ubuntu16
+#+BEGIN_EXPORT html
+<img src="/images/ubuntu03.png" alt="Drawing" width="400px" />
+#+END_EXPORT
+** ssh 
+#+BEGIN_EXPORT html
+<img src="/images/ubuntu04.png" alt="Drawing" width="400px" />
+#+END_EXPORT
