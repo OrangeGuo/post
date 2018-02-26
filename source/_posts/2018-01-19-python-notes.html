@@ -1,0 +1,65 @@
+---
+title: "python-notes"
+date: 2017-07-31
+layout: post
+categories: 
+- notes
+tags: 
+- python
+published: true
+comments: 
+---
+
+<div id="outline-container-orgb8b9749" class="outline-2">
+<h2 id="orgb8b9749">python 学习笔记</h2>
+<div class="outline-text-2" id="text-orgb8b9749">
+</div>
+<div id="outline-container-orgbc97468" class="outline-3">
+<h3 id="orgbc97468">动态语言VS静态语言</h3>
+<div class="outline-text-3" id="text-orgbc97468">
+<p>
+<b>java</b> 是静态语言，要求严格的继承体系。如动态中向上转型传入参数必须为子类实例对象，否则报错。
+而对于动态语言 <b>python</b> 则不会，它只要求传入参数必须含有过程中被调用的方法即只要某一方面像父类（即只要看起来或者走起来像鸭子）即可。
+</p>
+</div>
+</div>
+<div id="outline-container-org89e5c74" class="outline-3">
+<h3 id="org89e5c74">关于引用类型</h3>
+<div class="outline-text-3" id="text-org89e5c74">
+<ul class="org-ul">
+<li>可以使用 <b>type()</b> 方法判断类型</li>
+<li>可以使用 <b>isinstance()</b> 方法进一步确定 class 类型</li>
+<li>使用 <b>dir()</b> 获取对象的所有属性和方法（以 <b>list</b> 形式返回）</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4fa32c8" class="outline-3">
+<h3 id="org4fa32c8">序列化</h3>
+<div class="outline-text-3" id="text-org4fa32c8">
+<p>
+把变量从内存中变为可存储或运输的过程称为序列化，在 <b>python</b> 中称为 <b>pickling</b>,反过来把变量内容从序列化的对象中重新读到内存中称为反序列化。
+</p>
+</div>
+</div>
+<div id="outline-container-orge8d7ee8" class="outline-3">
+<h3 id="orge8d7ee8">比较 list,tuple,dict,set</h3>
+<div class="outline-text-3" id="text-orge8d7ee8">
+</div>
+<ul class="org-ul">
+<li><a id="orgddc7aa1"></a><b>list</b> 为有序集合，可动态删除或增加元素，以 <b>[]</b> 作标识<br /></li>
+<li><a id="org62c5b1d"></a><b>tuple</b> 一旦初始化具有不变性，即对其中 <b>()</b> 每个元素的指向不变，与 <b>list</b> 相比更安全<br /></li>
+<li><a id="org2b23bf1"></a><b>dict</b> 以 <b>key-value</b> 方式存储数据，与 <b>list</b> 相比有以下特点：<br />
+<div class="outline-text-5" id="text-org2b23bf1">
+<ol class="org-ol">
+<li>插入和查找的速度快，不随 <b>key</b> 增加而变慢（ <b>list</b> 插入和查找速度随元素数量增加而变慢）</li>
+<li>需要占用大量内存空间（ <b>list</b> 占用空间小）</li>
+</ol>
+<p>
+因而看出 <b>dict</b> 是以空间代价换取时间优势。dict 中 key 为不可变对象，不能使用 list 等作为 key
+</p>
+</div>
+</li>
+<li><a id="orgbabdd4b"></a><b>set</b> 为无序不重复 key 集合，同样 key 为不可变对象，即不能使用 list 来作为 key<br /></li>
+</ul>
+</div>
+</div>

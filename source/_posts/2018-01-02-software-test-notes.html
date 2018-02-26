@@ -1,0 +1,440 @@
+---
+title: "软件测试复习笔记"
+date: 2018-01-02
+layout: post
+categories: 
+- review
+tags: 
+- exam
+published: true
+comments: 
+---
+
+
+<div id="outline-container-orgb2e1ee9" class="outline-2">
+<h2 id="orgb2e1ee9">绪言</h2>
+<div class="outline-text-2" id="text-orgb2e1ee9">
+</div>
+<div id="outline-container-orgd18fa6d" class="outline-3">
+<h3 id="orgd18fa6d">软件质量问题的原因</h3>
+<div class="outline-text-3" id="text-orgd18fa6d">
+<ul class="org-ul">
+<li>需求不清</li>
+<li>缺乏有效的项目管理</li>
+<li>缺乏有效的开发方法</li>
+<li>不遵守开发标准和规范</li>
+<li>软件开发工具引起</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb0886dc" class="outline-3">
+<h3 id="orgb0886dc">软件质量属性</h3>
+<div class="outline-text-3" id="text-orgb0886dc">
+</div>
+<div id="outline-container-org4629051" class="outline-4">
+<h4 id="org4629051">产品修改</h4>
+<div class="outline-text-4" id="text-org4629051">
+<p>
+可理解性；可维护性；可测试性；灵活性
+</p>
+</div>
+</div>
+<div id="outline-container-orge648e92" class="outline-4">
+<h4 id="orge648e92">产品转移</h4>
+<div class="outline-text-4" id="text-orge648e92">
+<p>
+可移植性；可重用性；互运行性
+</p>
+</div>
+</div>
+<div id="outline-container-org8138f76" class="outline-4">
+<h4 id="org8138f76">产品运行</h4>
+<div class="outline-text-4" id="text-org8138f76">
+<p>
+正确性；效率；健壮性；风险；完整性；可用性
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd7feccf" class="outline-3">
+<h3 id="orgd7feccf">从三个方面考察软件质量</h3>
+<div class="outline-text-3" id="text-orgd7feccf">
+<p>
+<b>资源；过程；产品</b>
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">考察角度</th>
+<th scope="col" class="org-left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">资源质量</td>
+<td class="org-left">人员培训，供应链控制</td>
+</tr>
+
+<tr>
+<td class="org-left">过程质量</td>
+<td class="org-left">CMM过程管理</td>
+</tr>
+
+<tr>
+<td class="org-left">产品质量</td>
+<td class="org-left">代码、文档、数据</td>
+</tr>
+</tbody>
+</table>
+<img src="/images/softtest01.png" alt="Drawing" width="400px" />
+</div>
+</div>
+<div id="outline-container-org703cf7a" class="outline-3">
+<h3 id="org703cf7a">软件测试流程</h3>
+<div class="outline-text-3" id="text-org703cf7a">
+<p>
+测试需求；测试计划；测试设计；测试执行；测试管理
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1dfc33f" class="outline-2">
+<h2 id="org1dfc33f">软件测试基础</h2>
+<div class="outline-text-2" id="text-org1dfc33f">
+</div>
+<div id="outline-container-orgca8e47d" class="outline-3">
+<h3 id="orgca8e47d">基本术语</h3>
+<div class="outline-text-3" id="text-orgca8e47d">
+</div>
+<div id="outline-container-org3f35d42" class="outline-4">
+<h4 id="org3f35d42">测试用例(test case)</h4>
+<div class="outline-text-4" id="text-org3f35d42">
+<p>
+为特定目的而设计的一组测试输入，执行条件和预期输出
+</p>
+</div>
+</div>
+<div id="outline-container-orgca04603" class="outline-4">
+<h4 id="orgca04603">测试池(test pool)</h4>
+<div class="outline-text-4" id="text-orgca04603">
+<p>
+供选择的测试用例的集合
+</p>
+</div>
+</div>
+<div id="outline-container-org4627569" class="outline-4">
+<h4 id="org4627569">测试集(test suite)</h4>
+<div class="outline-text-4" id="text-org4627569">
+<p>
+一轮测试中所选中的测试用例的集合
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org081c59e" class="outline-3">
+<h3 id="org081c59e">缺陷分类</h3>
+<div class="outline-text-3" id="text-org081c59e">
+<p>
+<b>从外部需求的满足情况</b>
+</p>
+<img src="/images/softtest02.png" alt="Drawing" width="400px" />
+<p>
+<b>从软件内部设计</b>
+</p>
+<ol class="org-ol">
+<li>输入或输出缺陷</li>
+<li>逻辑缺陷</li>
+<li>计算缺陷</li>
+<li>接口缺陷</li>
+<li>数据缺陷</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org4f69301" class="outline-3">
+<h3 id="org4f69301">测试用例</h3>
+<div class="outline-text-3" id="text-org4f69301">
+<p>
+<b>评价</b>
+</p>
+<ul class="org-ul">
+<li>检测软件缺陷的有效性</li>
+<li>测试用例本身的可重用性，经济性，可维护性</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5edc75c" class="outline-3">
+<h3 id="org5edc75c">测试目的</h3>
+<div class="outline-text-3" id="text-org5edc75c">
+</div>
+<div id="outline-container-org3b75561" class="outline-4">
+<h4 id="org3b75561">测试是程序的执行过程，目的是发现错误</h4>
+</div>
+<div id="outline-container-org2601836" class="outline-4">
+<h4 id="org2601836">检查系统是否满足需求</h4>
+</div>
+<div id="outline-container-orgb543a20" class="outline-4">
+<h4 id="orgb543a20"><b>根本目的</b></h4>
+<div class="outline-text-4" id="text-orgb543a20">
+</div>
+<ul class="org-ul">
+<li><a id="orgb064eff"></a>发现错误<br /></li>
+<li><a id="orgd7b3247"></a>通过测试的错误来改进软件开发过程中存在的缺陷<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd18b3ca" class="outline-3">
+<h3 id="orgd18b3ca">测试的阶段</h3>
+<div class="outline-text-3" id="text-orgd18b3ca">
+<img src="/images/softtest03.png" alt="Drawing" width="400px" />
+</div>
+</div>
+<div id="outline-container-orgf0d2194" class="outline-3">
+<h3 id="orgf0d2194">软件测试技术</h3>
+<div class="outline-text-3" id="text-orgf0d2194">
+</div>
+<div id="outline-container-org4d1abbd" class="outline-4">
+<h4 id="org4d1abbd">黑盒测试（功能性）和白盒测试（结构性）</h4>
+<div class="outline-text-4" id="text-org4d1abbd">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">优点</th>
+<th scope="col" class="org-left">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">黑盒测试</td>
+<td class="org-left">与软件如何实现无关，可适应实现变化</td>
+<td class="org-left">测试用例之间可能存在冗余</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">测试开发可与实现并行</td>
+<td class="org-left">测试用例局限于已描述行为</td>
+</tr>
+
+<tr>
+<td class="org-left">白盒测试</td>
+<td class="org-left">定义了丰富的覆盖率指标体系便于度量管理</td>
+<td class="org-left">难以测试遗漏功能</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org6c9d9a6" class="outline-4">
+<h4 id="org6c9d9a6">静态测试和动态测试</h4>
+</div>
+<div id="outline-container-org96c3d5d" class="outline-4">
+<h4 id="org96c3d5d">传统测试和面向对象测试</h4>
+</div>
+<div id="outline-container-org5e15227" class="outline-4">
+<h4 id="org5e15227">特定环境及应用的测试</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orga80a4dc" class="outline-2">
+<h2 id="orga80a4dc">黑盒测试</h2>
+<div class="outline-text-2" id="text-orga80a4dc">
+</div>
+<div id="outline-container-org24a795a" class="outline-3">
+<h3 id="org24a795a">测试需求的描述</h3>
+<div class="outline-text-3" id="text-org24a795a">
+</div>
+<div id="outline-container-org2e4fc9d" class="outline-4">
+<h4 id="org2e4fc9d">需求跟踪矩阵</h4>
+</div>
+<div id="outline-container-orgbf77f3d" class="outline-4">
+<h4 id="orgbf77f3d">用例场景</h4>
+</div>
+</div>
+<div id="outline-container-org52ac348" class="outline-3">
+<h3 id="org52ac348">测试规格的描述</h3>
+</div>
+<div id="outline-container-orgea2b88c" class="outline-3">
+<h3 id="orgea2b88c">其他常用测试技术</h3>
+<div class="outline-text-3" id="text-orgea2b88c">
+</div>
+<div id="outline-container-org630ba30" class="outline-4">
+<h4 id="org630ba30">随机测试法</h4>
+</div>
+<div id="outline-container-org10e2052" class="outline-4">
+<h4 id="org10e2052">等价类划分法</h4>
+</div>
+<div id="outline-container-orgc7c2982" class="outline-4">
+<h4 id="orgc7c2982">边界值分析法</h4>
+</div>
+<div id="outline-container-org4aa89a8" class="outline-4">
+<h4 id="org4aa89a8">正交实验设计法</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org5ee797d" class="outline-2">
+<h2 id="org5ee797d">白盒测试</h2>
+<div class="outline-text-2" id="text-org5ee797d">
+</div>
+<div id="outline-container-orga8a42e5" class="outline-3">
+<h3 id="orga8a42e5">常见白盒测试方法</h3>
+<div class="outline-text-3" id="text-orga8a42e5">
+</div>
+<div id="outline-container-orgf827458" class="outline-4">
+<h4 id="orgf827458">静态测试</h4>
+<div class="outline-text-4" id="text-orgf827458">
+<ul class="org-ul">
+<li>人工代码检查</li>
+<li>软件度量</li>
+<li>程序分析与推理</li>
+<li>风格检查</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc94f70b" class="outline-4">
+<h4 id="orgc94f70b">动态测试</h4>
+<div class="outline-text-4" id="text-orgc94f70b">
+<ul class="org-ul">
+<li>覆盖测试分析</li>
+<li>运行时错误检查</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9973c41" class="outline-3">
+<h3 id="org9973c41">覆盖测试</h3>
+<div class="outline-text-3" id="text-org9973c41">
+<img src="/images/softtest04.png" alt="Drawing" width="400px" />
+</div>
+</div>
+</div>
+<div id="outline-container-orgd560aa7" class="outline-2">
+<h2 id="orgd560aa7">单元测试</h2>
+<div class="outline-text-2" id="text-orgd560aa7">
+</div>
+<div id="outline-container-org942f262" class="outline-3">
+<h3 id="org942f262">目的</h3>
+<div class="outline-text-3" id="text-org942f262">
+<ul class="org-ul">
+<li>检查代码是否符合设计和规范，保证局部代码的质量</li>
+<li>尽早发现错误，快速编程反馈</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdf01cab" class="outline-3">
+<h3 id="orgdf01cab">主要内容</h3>
+<div class="outline-text-3" id="text-orgdf01cab">
+<p>
+<b>主要关注内部处理逻辑和数据结构</b>
+</p>
+<ul class="org-ul">
+<li>模块接口测试</li>
+<li>局部数据结构测试</li>
+<li>独立路径测试</li>
+<li>错误处理测试</li>
+<li>边界测试</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb0ff04b" class="outline-3">
+<h3 id="orgb0ff04b">过程</h3>
+<div class="outline-text-3" id="text-orgb0ff04b">
+<ol class="org-ol">
+<li>实例化别测试对象</li>
+<li>提供测试数据</li>
+<li>调用被测试的方法</li>
+<li>验证测试结果</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org84f352e" class="outline-3">
+<h3 id="org84f352e">单元测试的工具 junit</h3>
+<div class="outline-text-3" id="text-org84f352e">
+<img src="/images/softtest05.png" alt="Drawing" width="400px" />
+</div>
+</div>
+</div>
+<div id="outline-container-org6b90804" class="outline-2">
+<h2 id="org6b90804">集成测试</h2>
+<div class="outline-text-2" id="text-org6b90804">
+<img src="/images/softtest06.png" alt="Drawing" width="400px" />
+</div>
+<div id="outline-container-org2f4b724" class="outline-3">
+<h3 id="org2f4b724">集成策略</h3>
+<div class="outline-text-3" id="text-org2f4b724">
+</div>
+<div id="outline-container-org7d73f5a" class="outline-4">
+<h4 id="org7d73f5a">非渐增式测试策略</h4>
+<div class="outline-text-4" id="text-org7d73f5a">
+<p>
+分别测试每个模块，然后组装所有模块成需要的程序
+适用于规模较小的系统且难以定位错误
+</p>
+</div>
+</div>
+<div id="outline-container-orgd494b23" class="outline-4">
+<h4 id="orgd494b23">渐增式测试策略</h4>
+<div class="outline-text-4" id="text-orgd494b23">
+<p>
+每次把下一个要测试的模块同已测试好的模块组合起来进行测试
+容易定位错误，但测试周期长
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org796eed2"></a>测试方法<br />
+<div class="outline-text-5" id="text-org796eed2">
+<ul class="org-ul">
+<li>自顶向下</li>
+<li>自底向上</li>
+<li>混合式集成</li>
+</ul>
+<img src="/images/softtest07.png" alt="Drawing" width="400px" />
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga0d34ea" class="outline-2">
+<h2 id="orga0d34ea">系统测试</h2>
+<div class="outline-text-2" id="text-orga0d34ea">
+<img src="/images/softtest08.png" alt="Drawing" width="400px" />
+</div>
+<div id="outline-container-orga34c113" class="outline-3">
+<h3 id="orga34c113">功能性测试</h3>
+<div class="outline-text-3" id="text-orga34c113">
+<ul class="org-ul">
+<li>功能符合性的测试</li>
+<li>标准的测试</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2a3daac" class="outline-3">
+<h3 id="org2a3daac">非功能性测试</h3>
+<div class="outline-text-3" id="text-org2a3daac">
+<ul class="org-ul">
+<li>兼容性测试</li>
+<li>可用性测试</li>
+<li>安全性测试</li>
+<li>可靠性测试</li>
+<li>国际化测试</li>
+</ul>
+</div>
+</div>
+</div>

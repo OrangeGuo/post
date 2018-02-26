@@ -1,0 +1,166 @@
+---
+title: "计算机网络"
+date: 2018-02-26
+layout: post
+categories: 
+- notes
+tags: 
+published: true
+comments: 
+---
+
+<div id="outline-container-org83d8a02" class="outline-2">
+<h2 id="org83d8a02">计算机网络概论</h2>
+<div class="outline-text-2" id="text-org83d8a02">
+</div>
+<div id="outline-container-org926ffc9" class="outline-3">
+<h3 id="org926ffc9">计算机网络</h3>
+<div class="outline-text-3" id="text-org926ffc9">
+</div>
+<div id="outline-container-orgfe31952" class="outline-4">
+<h4 id="orgfe31952">定义</h4>
+<div class="outline-text-4" id="text-orgfe31952">
+<p>
+由通信信道连接的 <b>主机和网络设备</b> 的集合，以方便用户共享资源和互相通信。
+</p>
+</div>
+</div>
+<div id="outline-container-org46cc972" class="outline-4">
+<h4 id="org46cc972">特征</h4>
+<div class="outline-text-4" id="text-org46cc972">
+<ul class="org-ul">
+<li><b>最主要特征</b> 是通用性，没有对特定应用进行优化</li>
+<li>能够支持广泛的、不断出现的新型应用</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8813029" class="outline-4">
+<h4 id="org8813029">用途</h4>
+<div class="outline-text-4" id="text-org8813029">
+<ul class="org-ul">
+<li>共享信息</li>
+<li>协同计算</li>
+<li>方便通信</li>
+<li>共享硬件</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org78a30c8" class="outline-4">
+<h4 id="org78a30c8">组成</h4>
+<div class="outline-text-4" id="text-org78a30c8">
+</div>
+<ul class="org-ul">
+<li><a id="org4c4ff1c"></a>称为节点的计算设备<br />
+<ul class="org-ul">
+<li><a id="orga4dcc21"></a>端系统（主机）<br /></li>
+<li><a id="orgacb90cd"></a>中间节点<br />
+<div class="outline-text-6" id="text-orgacb90cd">
+<p>
+路由器，交换机，自治系统，虚拟节点等。
+</p>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc09fe0b"></a>称为链路的物理媒体<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgcd3d101" class="outline-4">
+<h4 id="orgcd3d101">传递数据的方式</h4>
+<div class="outline-text-4" id="text-orgcd3d101">
+</div>
+<ul class="org-ul">
+<li><a id="org59ce809"></a>电路交换（电话网）<br />
+<div class="outline-text-5" id="text-org59ce809">
+<p>
+<b>基本过程</b>
+</p>
+<ol class="org-ol">
+<li>建立连接</li>
+<li>传输数据</li>
+<li>连接释放</li>
+</ol>
+
+<p>
+<b>优点</b> 独占资源，通信质量有保证，延迟小，无拥塞
+<b>缺点</b> 建立连接时间长，工作复杂，有时工作效率低
+</p>
+</div>
+</li>
+<li><a id="orgca48984"></a>分组交换（计算机网络）<br />
+<div class="outline-text-5" id="text-orgca48984">
+<ul class="org-ul">
+<li>首先采用存储转发机制</li>
+<li>将长数据划分为若干短数据形成分组</li>
+</ul>
+<p>
+以上两条为 <b>计算机网络最根本工作机制</b>
+</p>
+</div>
+</li>
+<li><a id="orgb4010e8"></a>报文交换<br />
+<div class="outline-text-5" id="text-orgb4010e8">
+<p>
+<b>优点</b> 无连接，采用存储转发
+<b>缺点</b> 对报文大小无限制，有时占用中间节点空间大，延时大
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org1c57aca" class="outline-4">
+<h4 id="org1c57aca">网络拓扑结构</h4>
+<div class="outline-text-4" id="text-org1c57aca">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">分类</th>
+<th scope="col" class="org-left">优点</th>
+<th scope="col" class="org-left">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">总线型</td>
+<td class="org-left">结构简单</td>
+<td class="org-left">单点故障可能影响全网</td>
+</tr>
+
+<tr>
+<td class="org-left">星型</td>
+<td class="org-left">扩展方便</td>
+<td class="org-left">对中心节点依赖较大</td>
+</tr>
+
+<tr>
+<td class="org-left">树型</td>
+<td class="org-left">扩展方便</td>
+<td class="org-left">对非叶子节点依赖较大</td>
+</tr>
+
+<tr>
+<td class="org-left">环形</td>
+<td class="org-left">结构简单，扩展方便</td>
+<td class="org-left">单点故障可能影响全网</td>
+</tr>
+
+<tr>
+<td class="org-left">网状</td>
+<td class="org-left">扩展方便</td>
+<td class="org-left">冗余太多</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,63 @@
+---
+title: "how to write blog with org-mode in emacs ?"
+date: 2018-01-04
+layout: post
+categories: 
+- emacs
+tags: 
+- tutorial
+published: true
+comments: 
+---
+
+
+<div id="outline-container-org0d03157" class="outline-2">
+<h2 id="org0d03157">preparations</h2>
+<div class="outline-text-2" id="text-org0d03157">
+</div>
+<div id="outline-container-orgb6bc6c2" class="outline-3">
+<h3 id="orgb6bc6c2">install and config "org-octopress"</h3>
+<div class="outline-text-3" id="text-orgb6bc6c2">
+<p>
+<i>org-octopress</i> is a necessary and useful package,which helps us write blogs in emacs with org-mode.It is very easy to install this 
+package in your emacs: 
+</p>
+<ol class="org-ol">
+<li>M-x</li>
+<li>package-install</li>
+<li>Enter</li>
+<li>org-octopress</li>
+<li>Enter</li>
+</ol>
+<p>
+emmm,just wait for a while.The installation will be finished soon.
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #3a81c3;">(</span><span style="color: #3a81c3; font-weight: bold;">require</span> '<span style="color: #4e3163; font-weight: bold;">org-octopress</span><span style="color: #3a81c3;">)</span>
+<span style="color: #3a81c3;">(</span>setq org-octopress-directory-top       <span style="color: #2d9574;">"~/blog/source"</span><span style="color: #3a81c3;">)</span>
+<span style="color: #3a81c3;">(</span>setq org-octopress-directory-posts     <span style="color: #2d9574;">"~/blog/source/_posts"</span><span style="color: #3a81c3;">)</span>
+<span style="color: #3a81c3;">(</span>setq org-octopress-directory-org-top   <span style="color: #2d9574;">"~/blog/source"</span><span style="color: #3a81c3;">)</span>
+<span style="color: #3a81c3;">(</span>setq org-octopress-directory-org-posts <span style="color: #2d9574;">"~/blog/source/blog"</span><span style="color: #3a81c3;">)</span>
+<span style="color: #3a81c3;">(</span>setq org-octopress-setup-file          <span style="color: #2d9574;">"~/blog/setupfile.org"</span><span style="color: #3a81c3;">)</span>
+</pre>
+</div>
+<p>
+then you should add codes above to your config file such as .emacs or init.el.as the directory is showed,"blog" is my folder containing 
+the blogs,so just replace it with yours.
+</p>
+</div>
+</div>
+<div id="outline-container-org0f82d9c" class="outline-3">
+<h3 id="org0f82d9c">tips</h3>
+<div class="outline-text-3" id="text-org0f82d9c">
+<p>
+how to remove the bothering "table of contents" and line numbers?
+</p>
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #3a81c3;">(</span>setq org-export-with-toc nil<span style="color: #3a81c3;">)</span>
+<span style="color: #3a81c3;">(</span>setq org-export-with-section-numbers nil<span style="color: #3a81c3;">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>

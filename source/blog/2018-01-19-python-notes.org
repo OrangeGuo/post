@@ -1,0 +1,27 @@
+#+TITLE: python-notes
+#+DATE: 2017-07-31
+#+SETUPFILE: ~/blog/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: notes
+#+JEKYLL_TAGS: python
+#+JEKYLL_PUBLISHED: true
+
+* python 学习笔记
+** 动态语言VS静态语言
+*java* 是静态语言，要求严格的继承体系。如动态中向上转型传入参数必须为子类实例对象，否则报错。
+而对于动态语言 *python* 则不会，它只要求传入参数必须含有过程中被调用的方法即只要某一方面像父类（即只要看起来或者走起来像鸭子）即可。
+** 关于引用类型
+- 可以使用 *type()* 方法判断类型
+- 可以使用 *isinstance()* 方法进一步确定 class 类型
+- 使用 *dir()* 获取对象的所有属性和方法（以 *list* 形式返回）
+** 序列化
+把变量从内存中变为可存储或运输的过程称为序列化，在 *python* 中称为 *pickling*,反过来把变量内容从序列化的对象中重新读到内存中称为反序列化。
+** 比较 list,tuple,dict,set 
+**** *list* 为有序集合，可动态删除或增加元素，以 *[]* 作标识
+**** *tuple* 一旦初始化具有不变性，即对其中 *()* 每个元素的指向不变，与 *list* 相比更安全
+**** *dict* 以 *key-value* 方式存储数据，与 *list* 相比有以下特点：
+1) 插入和查找的速度快，不随 *key* 增加而变慢（ *list* 插入和查找速度随元素数量增加而变慢）
+2) 需要占用大量内存空间（ *list* 占用空间小）
+因而看出 *dict* 是以空间代价换取时间优势。dict 中 key 为不可变对象，不能使用 list 等作为 key
+**** *set* 为无序不重复 key 集合，同样 key 为不可变对象，即不能使用 list 来作为 key
+

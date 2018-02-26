@@ -1,0 +1,154 @@
+---
+title: "TSP问题求解"
+date: 2016-09-06
+layout: post
+categories: 
+- notes
+tags: 
+- java 
+- tutorial
+published: true
+comments: 
+---
+
+<div id="outline-container-org445e3d9" class="outline-2">
+<h2 id="org445e3d9">什么是 <i>TSP问题</i> ?</h2>
+<div class="outline-text-2" id="text-org445e3d9">
+</div>
+<div id="outline-container-org3bd3f89" class="outline-3">
+<h3 id="org3bd3f89">定义</h3>
+<div class="outline-text-3" id="text-org3bd3f89">
+<p>
+  TSP问题（Traveling Salesman Problem）即旅行商问题又译为旅行推销员问题、货郎担问题，是数学领域中著名问题之一。
+假设有一个旅行商人要拜访n个城市，他必须选择所要走的路径，路径的限制是每个城市只能拜访一次，而且最后要回到原来出
+发的城市。路径的选择目标是要求得的路径路程为所有路径之中的最小值。
+</p>
+</div>
+</div>
+<div id="outline-container-orgedfbb5b" class="outline-3">
+<h3 id="orgedfbb5b">特点</h3>
+<div class="outline-text-3" id="text-orgedfbb5b">
+<p>
+  TSP问题是一个组合优化问题，是 <b>图论</b> 中最著名的问题之一（即“已给一个N个点的完全图，每条边有一个长度，求总长度最短
+的经过每个顶点正好一次的封闭回路”），且具有 <b>NPC计算复杂性</b> 。
+</p>
+</div>
+</div>
+<div id="outline-container-orge3a0802" class="outline-3">
+<h3 id="orge3a0802">限制</h3>
+<div class="outline-text-3" id="text-orge3a0802">
+<p>
+这里考虑的TSP问题中任意两个城市都存在路径且来回距离是相等的，用图论的知识对TSP建模，则城市是图的顶点，路径是图的
+边，那么这里的TSP问题可以等价为用对一个 <b>无向加权完全图</b> 求封闭回路。
+</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org112bd80" class="outline-2">
+<h2 id="org112bd80">求解算法</h2>
+<div class="outline-text-2" id="text-org112bd80">
+<p>
+求解TSP问题的算法有很多，如贪心算法，遗传算法，蚁群算法，模拟褪火算法，粒子群算法等等。这里选取前三种算法来求解。
+</p>
+<ul class="org-ul">
+<li><b>贪心算法</b> 顾名思义，贪心算法求解过程中每次只考虑当前情况下的最优结果，算法简单容易实现，求解速度快。但求得结果往往不是全局最优解。</li>
+<li><b>遗传算法</b> 遗传算法是一种具有全局搜索能力的智能算法，对求解TSP问题效果相当不错。</li>
+<li><b>蚁群算法</b> 蚁群算法是根据自然界中蚂蚁发现路径的行为而发明的用于寻求优化路径的机率型算法。</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="outline-container-org20271e7" class="outline-2">
+<h2 id="org20271e7">算法步骤及效果评估</h2>
+<div class="outline-text-2" id="text-org20271e7">
+</div>
+<div id="outline-container-org77bd7bd" class="outline-3">
+<h3 id="org77bd7bd">准备工作</h3>
+<div class="outline-text-3" id="text-org77bd7bd">
+<p>
+假设输入为N个城市及城市的坐标。对所有城市进行编号，依次为N<sub>1</sub> ,N<sub>2</sub> &#x2026;N<sub>n</sub> 以描述得到解的路径，然后根据各点坐标求解任意两点间距离并用
+一张表（可以是一个二维数组）存储起来为后面求解作准备。
+</p>
+</div>
+</div>
+<div id="outline-container-orgfc69cb4" class="outline-3">
+<h3 id="orgfc69cb4">贪心算法</h3>
+<div class="outline-text-3" id="text-orgfc69cb4">
+</div>
+<div id="outline-container-orgcbd7f88" class="outline-4">
+<h4 id="orgcbd7f88">具体步骤</h4>
+<div class="outline-text-4" id="text-orgcbd7f88">
+<ol class="org-ol">
+<li>选取任意点N<sub>i</sub> 作为起点（1&le; i &le; n），并将该点加入路径（开始路径为空）；</li>
+<li>从所有不在路径中的点中选取离最新加入路径的点最近的点加入路径；</li>
+<li>重复步骤2直至所有点均加入路径，此时按照各点加入路径的顺序连接各点并连接起点和终点形成的回路便是求得解。</li>
+</ol>
+<img src="/images/tsp01.png" alt="Drawing" width="400px" />
+</div>
+</div>
+<div id="outline-container-org5c7c0d6" class="outline-4">
+<h4 id="org5c7c0d6">结果评估</h4>
+<div class="outline-text-4" id="text-org5c7c0d6">
+<p>
+输入为标准51个城市数据。一般随机选取起点，然后按算法步骤求得解即
+为最终结果。这里分别把每个城市作为起点进行计算，取其中最优解做为最终结果，更为合理。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8adc5ce" class="outline-3">
+<h3 id="org8adc5ce">遗传算法</h3>
+<div class="outline-text-3" id="text-org8adc5ce">
+</div>
+<div id="outline-container-orge911177" class="outline-4">
+<h4 id="orge911177">具体步骤</h4>
+<div class="outline-text-4" id="text-orge911177">
+<ol class="org-ol">
+<li>设置种群个体数，最优个体复制率，变异率，迭代次数；</li>
+<li>初始化种群（这里将每次随机生成的路径看作种群个体）；</li>
+<li>计算个体适应度（按照每条路径计算回路长度，长度越短适应度越高，可设置适应度为长度倒数）；</li>
+<li>根据适应度找到最优个体并根据复制率复制该个体，然后按适应度排序移除排名靠后个体；</li>
+<li>按照变异率随机选取个体变异；</li>
+<li>重复3-5步骤若干次数（迭代次数）。</li>
+</ol>
+<img src="/images/tsp02.png" alt="Drawing" width="400px" />
+</div>
+</div>
+<div id="outline-container-org01f7f0f" class="outline-4">
+<h4 id="org01f7f0f">结果评估</h4>
+<div class="outline-text-4" id="text-org01f7f0f">
+<p>
+输入数据同上。按上述步骤求解。这里设置种群个体数为100, 变异率为0.1, 最优个体复制率为0.1, 迭代次数为200次。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga771295" class="outline-3">
+<h3 id="orga771295">蚁群算法</h3>
+<div class="outline-text-3" id="text-orga771295">
+</div>
+<div id="outline-container-orgec92b9c" class="outline-4">
+<h4 id="orgec92b9c">具体步骤</h4>
+<div class="outline-text-4" id="text-orgec92b9c">
+<ol class="org-ol">
+<li>设置迭代次数（每只蚂蚁跑完一圈视为一次迭代），蚂蚁数量（这里在每个城市放置一只蚂蚁即蚂蚁数等于城市数），信息素挥发率；</li>
+<li>分别在每个城市放置一个蚂蚁，并标记（已访问过的蚂蚁不能再次访问该城市），初始化每个城市的信息素浓度（按照距离越短信息素浓度越高的原则）；</li>
+<li>根据信息素浓度为每只蚂蚁选择下一个访问城市，并对每个城市根据当前蚂蚁数量更新信息素浓度；</li>
+<li>重复步骤3至所有城市均访问过；</li>
+<li>挥发信息素</li>
+<li>重复步骤3-5若干次（迭代次数）。</li>
+</ol>
+<img src="/images/tsp03.png" alt="Drawing" width="400px" />
+</div>
+</div>
+<div id="outline-container-org1e2e567" class="outline-4">
+<h4 id="org1e2e567">结果评估</h4>
+<div class="outline-text-4" id="text-org1e2e567">
+<p>
+输入数据同上。按上述步骤求解。这里设置蚂蚁数量等于城市数量，迭代次数为200次。
+</p>
+</div>
+</div>
+</div>
+</div>

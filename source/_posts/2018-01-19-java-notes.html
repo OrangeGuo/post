@@ -1,0 +1,102 @@
+---
+title: "java notes"
+date: 2017-07-11
+layout: post
+categories: 
+- notes
+tags: 
+- java
+published: true
+comments: 
+---
+
+<div id="outline-container-org8f326aa" class="outline-2">
+<h2 id="org8f326aa">java notes</h2>
+<div class="outline-text-2" id="text-org8f326aa">
+</div>
+<div id="outline-container-orga2df393" class="outline-3">
+<h3 id="orga2df393">java类集框架中map的输出</h3>
+<div class="outline-text-3" id="text-orga2df393">
+<p>
+<b>map</b> 不能直接使用iterator输出，因为 map 接口没有提供类似于 collection 接口的iterator 方法。
+</p>
+</div>
+<div id="outline-container-org11bbb8b" class="outline-4">
+<h4 id="org11bbb8b">使用iterator输出map 的步骤</h4>
+<div class="outline-text-4" id="text-org11bbb8b">
+<ol class="org-ol">
+<li>使用map 接口的entrySet 方法将map 集合转化成set 集合；</li>
+<li>取得set 实例化后，使用其iterator 方法获取迭代器实例对象；</li>
+<li>使用iterator 迭代找到每一个map.entrySet 对象，再分离key 和 value;</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgdae587f" class="outline-4">
+<h4 id="orgdae587f">参考代码</h4>
+<div class="outline-text-4" id="text-orgdae587f">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ba2f59; font-weight: bold;">List</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #715ab1;">list</span>=<span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">ArrayList</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #3a81c3;">&gt;()</span>;
+list.add<span style="color: #3a81c3;">(</span><span style="color: #2d9574;">"nuaa"</span><span style="color: #3a81c3;">)</span>;
+<span style="color: #ba2f59; font-weight: bold;">Set</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #715ab1;">set</span>=<span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">HashSet</span><span style="color: #3a81c3;">&lt;&gt;()</span>;
+set.addAll<span style="color: #3a81c3;">(</span>list<span style="color: #3a81c3;">)</span>;
+<span style="color: #ba2f59; font-weight: bold;">Map</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">UUID</span>,<span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #715ab1;">map</span>=<span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">HashMap</span><span style="color: #3a81c3;">()</span>;
+<span style="color: #ba2f59; font-weight: bold;">Iterator</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #715ab1;">iterator</span>=set.iterator<span style="color: #3a81c3;">()</span>;
+<span style="color: #3a81c3; font-weight: bold;">while</span><span style="color: #3a81c3;">(</span>iterator.hasNext<span style="color: #6c3163;">()</span><span style="color: #3a81c3;">){</span>
+    map.put<span style="color: #6c3163;">(</span>UUID.randomUUID<span style="color: #2d9574;">()</span>,iterator.next<span style="color: #2d9574;">()</span><span style="color: #6c3163;">)</span>;
+<span style="color: #3a81c3;">}</span>
+<span style="color: #ba2f59; font-weight: bold;">Iterator</span><span style="color: #3a81c3;">&lt;</span><span style="color: #4e3163; font-weight: bold;">Map</span>.<span style="color: #ba2f59; font-weight: bold;">Entry</span><span style="color: #6c3163;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">UUID</span>,<span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #6c3163;">&gt;</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #715ab1;">iterator2</span>=map.entrySet.iterator<span style="color: #3a81c3;">()</span>;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfdc5269" class="outline-3">
+<h3 id="orgfdc5269">IO流</h3>
+<div class="outline-text-3" id="text-orgfdc5269">
+</div>
+<div id="outline-container-org963903e" class="outline-4">
+<h4 id="org963903e">文件操作</h4>
+<div class="outline-text-4" id="text-org963903e">
+<ul class="org-ul">
+<li>路径分割－－使用File.separator 代替"/"或"\"(windows 或 linux);</li>
+<li>操作延迟－－JVM;</li>
+<li>目标文件的父目录不存在－－先判断父目录是否存在，再对目标文件进行对应操作；</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org235c3e2" class="outline-4">
+<h4 id="org235c3e2">字节流</h4>
+<div class="outline-text-4" id="text-org235c3e2">
+<ul class="org-ul">
+<li>inputStream</li>
+<li>outputStream</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd118fa8" class="outline-4">
+<h4 id="orgd118fa8">字符流</h4>
+<div class="outline-text-4" id="text-orgd118fa8">
+<ul class="org-ul">
+<li>writer</li>
+<li>reader</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9f0fa81" class="outline-4">
+<h4 id="org9f0fa81">比较字节流和字符流</h4>
+<div class="outline-text-4" id="text-org9f0fa81">
+<p>
+字符流为间接读写文件（通过缓冲区来操作文件），而字节流为直接操作。所以最好不要关闭IO流，字节流可以保存到文件，字符流则不能（但可以通过 flush 方法清空缓冲区保存到文件）。
+</p>
+</div>
+</div>
+<div id="outline-container-org7dda7e9" class="outline-4">
+<h4 id="org7dda7e9">对象序列化</h4>
+<div class="outline-text-4" id="text-org7dda7e9">
+<p>
+将内存中保存的对象数据进行二进制数据传输。
+</p>
+</div>
+</div>
+</div>
+</div>

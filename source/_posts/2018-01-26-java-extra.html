@@ -1,0 +1,88 @@
+---
+title: "java补充笔记"
+date: 2017-07-11
+layout: post
+categories: 
+- notes
+tags: 
+- java
+published: true
+comments: 
+---
+
+<div id="outline-container-orge2ccb7a" class="outline-2">
+<h2 id="orge2ccb7a">代码编写规范</h2>
+<div class="outline-text-2" id="text-orge2ccb7a">
+<ol class="org-ol">
+<li><b>类名</b> 每个单词的首字母都大写</li>
+<li><b>变量名</b> 第一个单词首字母小写，之后每个单词首字母大写</li>
+<li><b>方法名</b> (同变量名)</li>
+<li><b>常量名</b> 每个字母都大写</li>
+<li><b>包名</b> 每个字母都小写</li>
+</ol>
+<hr />
+</div>
+</div>
+<div id="outline-container-orgc710a31" class="outline-2">
+<h2 id="orgc710a31">内存空间</h2>
+<div class="outline-text-2" id="text-orgc710a31">
+</div>
+<div id="outline-container-orga2cd809" class="outline-3">
+<h3 id="orga2cd809">栈内存</h3>
+<div class="outline-text-3" id="text-orga2cd809">
+<p>
+保存所有对象的名称，堆内存的 <b>空间地址</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org1284e25" class="outline-3">
+<h3 id="org1284e25">堆内存</h3>
+<div class="outline-text-3" id="text-org1284e25">
+<p>
+保存对象的具体属性内容
+</p>
+</div>
+</div>
+<div id="outline-container-orgb13ede6" class="outline-3">
+<h3 id="orgb13ede6">全局数据区</h3>
+<div class="outline-text-3" id="text-orgb13ede6">
+<p>
+保存 <b>static</b> 类型的属性和内容
+</p>
+</div>
+</div>
+<div id="outline-container-org534c068" class="outline-3">
+<h3 id="org534c068">全局代码区</h3>
+<div class="outline-text-3" id="text-org534c068">
+<p>
+保存所有方法的 <b>定义</b>
+</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org86cb6ca" class="outline-2">
+<h2 id="org86cb6ca"><i>final</i> 关键字</h2>
+<div class="outline-text-2" id="text-org86cb6ca">
+<ul class="org-ul">
+<li><b>final类</b> 不能被继承</li>
+<li><b>final方法</b> 不能被子类覆写</li>
+<li><b>final变量</b> 为常量，赋值后不能被修改</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="outline-container-orgfe46e4b" class="outline-2">
+<h2 id="orgfe46e4b">其他</h2>
+<div class="outline-text-2" id="text-orgfe46e4b">
+<ol class="org-ol">
+<li><b>static</b> 类型的变量，方法和代码块在运行时最优先加载（ <b>static</b> 定义的属性被称为公共属性）</li>
+<li><b>throw</b> 是程序员手动抛出异常； <b>throws</b> 是 <b>JVM</b> 从异常发生处向上层抛出给调用处</li>
+<li><b>object</b> 类是java中所有类的父类，其中 <b>equals</b> 方法比较的是引用地址</li>
+<li><b>this()</b> 构造方法必须放在首行，多个构造方法相互调用必须留一个出口。（ <b>super()</b> 方法也必须放在函数体首行，且不能和 <b>this()</b> 同时出现</li>
+<li>方法的多态体现在 <b>重载和覆写</b> ，对象的多态体现在子类和父类对象的相互转化：子类对象给父类引用为 <b>向上转型</b> ，反之父类对象给子类引用则为 <b>向下转型</b></li>
+<li>接口（类）中的变量默认为 <b>全局变量</b> ，方法均为 <b>抽象方法</b></li>
+<li>抽象类可以 <b>implement</b> 接口，反之接口不能继承抽象类。（抽象类中可能含非抽象方法）</li>
+</ol>
+</div>
+</div>

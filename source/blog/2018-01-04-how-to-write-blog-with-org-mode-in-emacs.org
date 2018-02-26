@@ -1,0 +1,35 @@
+#+TITLE: how to write blog with org-mode in emacs ?
+#+DATE: 2018-01-04
+#+SETUPFILE: ~/blog/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: emacs
+#+JEKYLL_TAGS: tutorial 
+#+JEKYLL_PUBLISHED: true
+
+
+* preparations
+** install and config "org-octopress"
+/org-octopress/ is a necessary and useful package,which helps us write blogs in emacs with org-mode.It is very easy to install this 
+package in your emacs: 
+1. M-x 
+2. package-install
+3. Enter
+4. org-octopress
+5. Enter
+emmm,just wait for a while.The installation will be finished soon.
+#+BEGIN_SRC lisp
+  (require 'org-octopress)
+  (setq org-octopress-directory-top       "~/blog/source")
+  (setq org-octopress-directory-posts     "~/blog/source/_posts")
+  (setq org-octopress-directory-org-top   "~/blog/source")
+  (setq org-octopress-directory-org-posts "~/blog/source/blog")
+  (setq org-octopress-setup-file          "~/blog/setupfile.org")
+#+END_SRC
+then you should add codes above to your config file such as .emacs or init.el.as the directory is showed,"blog" is my folder containing 
+the blogs,so just replace it with yours.
+** tips
+how to remove the bothering "table of contents" and line numbers?
+#+BEGIN_SRC lisp
+  (setq org-export-with-toc nil)
+  (setq org-export-with-section-numbers nil)
+#+END_SRC

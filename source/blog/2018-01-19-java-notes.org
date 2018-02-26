@@ -1,0 +1,43 @@
+#+TITLE: java notes
+#+DATE: 2017-07-11
+#+SETUPFILE: ~/blog/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: notes
+#+JEKYLL_TAGS: java
+#+JEKYLL_PUBLISHED: true
+
+* java notes 
+** java类集框架中map的输出
+*map* 不能直接使用iterator输出，因为 map 接口没有提供类似于 collection 接口的iterator 方法。
+*** 使用iterator输出map 的步骤
+1. 使用map 接口的entrySet 方法将map 集合转化成set 集合；
+2. 取得set 实例化后，使用其iterator 方法获取迭代器实例对象；
+3. 使用iterator 迭代找到每一个map.entrySet 对象，再分离key 和 value;
+*** 参考代码
+#+BEGIN_SRC java
+  List<String> list=new ArrayList<String>();
+  list.add("nuaa");
+  Set<String> set=new HashSet<>();
+  set.addAll(list);
+  Map<UUID,String> map=new HashMap();
+  Iterator<String> iterator=set.iterator();
+  while(iterator.hasNext()){
+      map.put(UUID.randomUUID(),iterator.next());
+  }
+  Iterator<Map.Entry<UUID,String>> iterator2=map.entrySet.iterator();
+#+END_SRC
+** IO流
+*** 文件操作
+- 路径分割－－使用File.separator 代替"/"或"\"(windows 或 linux);
+- 操作延迟－－JVM;
+- 目标文件的父目录不存在－－先判断父目录是否存在，再对目标文件进行对应操作；
+*** 字节流
+- inputStream
+- outputStream
+*** 字符流
+- writer
+- reader
+*** 比较字节流和字符流
+字符流为间接读写文件（通过缓冲区来操作文件），而字节流为直接操作。所以最好不要关闭IO流，字节流可以保存到文件，字符流则不能（但可以通过 flush 方法清空缓冲区保存到文件）。
+*** 对象序列化
+将内存中保存的对象数据进行二进制数据传输。
