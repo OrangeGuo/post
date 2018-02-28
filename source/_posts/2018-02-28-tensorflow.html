@@ -1,0 +1,100 @@
+---
+title: "tensorflow"
+date: 2018-02-28
+layout: post
+categories: 
+- tensorflow
+tags: 
+- python
+published: true
+comments: 
+---
+
+<div id="outline-container-orgdc2ea83" class="outline-2">
+<h2 id="orgdc2ea83">Tensorflow 算法的一般流程</h2>
+<div class="outline-text-2" id="text-orgdc2ea83">
+</div>
+<div id="outline-container-orgee51db2" class="outline-3">
+<h3 id="orgee51db2">导入或生成样本数据集</h3>
+<div class="outline-text-3" id="text-orgee51db2">
+<p>
+所有的机器学习算法都依赖于样本数据集（既可以是生成的样本数据集，也可以是外部公开的样本数据集）
+</p>
+</div>
+</div>
+<div id="outline-container-org8d1559d" class="outline-3">
+<h3 id="org8d1559d">转换和归一化数据</h3>
+<div class="outline-text-3" id="text-org8d1559d">
+<p>
+当输入样本数据集不符合Tensorflow 期望的形状或数据集的维度、类型等不符合适用机器学习算法的要求时，需要进行数据转换
+</p>
+</div>
+</div>
+<div id="outline-container-org8e70136" class="outline-3">
+<h3 id="org8e70136">划分样本数据集为训练样本集、测试样本集和验证样本集</h3>
+<div class="outline-text-3" id="text-org8e70136">
+<p>
+一般要求训练样本集和测试样本集是不同的数据集。另外，许多机器学习算法要求超参数调优，所以需要验证样本集来决定最优的超参数
+</p>
+</div>
+</div>
+<div id="outline-container-orge41eb81" class="outline-3">
+<h3 id="orge41eb81">设置机器学习参数（超参数）</h3>
+<div class="outline-text-3" id="text-orge41eb81">
+<p>
+迭代次数，学习率等
+</p>
+</div>
+</div>
+<div id="outline-container-org1037c62" class="outline-3">
+<h3 id="org1037c62">初始化变量和占位符</h3>
+<div class="outline-text-3" id="text-org1037c62">
+<p>
+在求解最优化过程中（最小化损失函数），tensorflow 通过占位符获取数据，并调整变量和权重（或偏差）
+</p>
+</div>
+</div>
+<div id="outline-container-orgadc8856" class="outline-3">
+<h3 id="orgadc8856">定义模型结构</h3>
+</div>
+<div id="outline-container-org10e108c" class="outline-3">
+<h3 id="org10e108c">声明损失函数</h3>
+<div class="outline-text-3" id="text-org10e108c">
+<p>
+定义模型以后需要声明损失函数评估输出结果
+</p>
+</div>
+</div>
+<div id="outline-container-org8323396" class="outline-3">
+<h3 id="org8323396">初始化模型和训练模型</h3>
+<div class="outline-text-3" id="text-org8323396">
+<p>
+tensorflow 创建计算图实例，通过占位符赋值，维护变量的状态信息
+</p>
+</div>
+</div>
+<div id="outline-container-org00ccab1" class="outline-3">
+<h3 id="org00ccab1">评估机器学习模型</h3>
+<div class="outline-text-3" id="text-org00ccab1">
+<p>
+构建计算图，并训练机器模型后，需要评估机器学习模型对新样本数据集的效果（是否过拟合或欠拟合）
+</p>
+</div>
+</div>
+<div id="outline-container-orgf852603" class="outline-3">
+<h3 id="orgf852603">调优超参数</h3>
+<div class="outline-text-3" id="text-orgf852603">
+<p>
+通过调整不同的超参数来重复训练模型，并用验证样本集来评估机器学习模型
+</p>
+</div>
+</div>
+<div id="outline-container-org80a9d32" class="outline-3">
+<h3 id="org80a9d32">发布或预测结果</h3>
+<div class="outline-text-3" id="text-org80a9d32">
+<p>
+所有的机器学习模型一旦训练好，最后都用来预测未知的数据。
+</p>
+</div>
+</div>
+</div>
