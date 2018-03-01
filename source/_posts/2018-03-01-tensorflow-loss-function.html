@@ -1,0 +1,111 @@
+---
+title: "tensorflow 损失函数"
+date: 2018-03-01
+layout: post
+categories: 
+- tensorflow
+tags: 
+- python
+published: true
+comments: 
+---
+
+<div id="outline-container-orge0c2ee0" class="outline-2">
+<h2 id="orge0c2ee0">L2 正则损失函数（即欧拉损失函数）</h2>
+<div class="outline-text-2" id="text-orge0c2ee0">
+</div>
+<div id="outline-container-orgcd4fee0" class="outline-3">
+<h3 id="orgcd4fee0">方式</h3>
+<div class="outline-text-3" id="text-orgcd4fee0">
+<p>
+计算预测值与目标值差值的平方和
+</p>
+</div>
+</div>
+<div id="outline-container-org378ef92" class="outline-3">
+<h3 id="org378ef92">特点</h3>
+<div class="outline-text-3" id="text-org378ef92">
+<p>
+在目标值附近有更好的曲度，机器学习算法利用这点收敛，并且离目标越近收敛越慢
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6fe10a0" class="outline-2">
+<h2 id="org6fe10a0">L1 正则损失函数（即绝对值损失函数）</h2>
+<div class="outline-text-2" id="text-org6fe10a0">
+</div>
+<div id="outline-container-org5483686" class="outline-3">
+<h3 id="org5483686">方式</h3>
+<div class="outline-text-3" id="text-org5483686">
+<p>
+计算预测值和目标值差值的绝对值
+</p>
+</div>
+</div>
+<div id="outline-container-org1e36b23" class="outline-3">
+<h3 id="org1e36b23">特点</h3>
+<div class="outline-text-3" id="text-org1e36b23">
+<p>
+在目标值附近不平滑，会导致算法不能很好地收敛
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8a222fc" class="outline-2">
+<h2 id="org8a222fc">Pseudo-Huber 损失函数</h2>
+<div class="outline-text-2" id="text-org8a222fc">
+</div>
+<div id="outline-container-orgff36d89" class="outline-3">
+<h3 id="orgff36d89">方式</h3>
+<div class="outline-text-3" id="text-orgff36d89">
+<p>
+试图利用 L1 和 L2 正则削减极值处的陡峭，使得目标值附近连续
+</p>
+</div>
+</div>
+<div id="outline-container-org108337d" class="outline-3">
+<h3 id="org108337d">特点</h3>
+<div class="outline-text-3" id="text-org108337d">
+<p>
+是 Huber 损失函数的连续、平滑估计，依赖于参数 delta
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0bf0af0" class="outline-2">
+<h2 id="org0bf0af0">Hinge 损失函数</h2>
+<div class="outline-text-2" id="text-org0bf0af0">
+</div>
+<div id="outline-container-orgfa274d6" class="outline-3">
+<h3 id="orgfa274d6">特点</h3>
+<div class="outline-text-3" id="text-orgfa274d6">
+<p>
+主要用来评估支持向量机算法，有时用来评估神经网络算法
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4a0d79c" class="outline-2">
+<h2 id="org4a0d79c">两类交叉熵损失函数</h2>
+<div class="outline-text-2" id="text-org4a0d79c">
+</div>
+<div id="outline-container-org91207ff" class="outline-3">
+<h3 id="org91207ff">Sigmoid</h3>
+<div class="outline-text-3" id="text-org91207ff">
+<ol class="org-ol">
+<li>sigmoid 交叉熵损失函数</li>
+<li>加权 sigmoid 交叉熵损失函数</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgccec253" class="outline-3">
+<h3 id="orgccec253">Softmax</h3>
+<div class="outline-text-3" id="text-orgccec253">
+<ol class="org-ol">
+<li>softmax 交叉熵损失函数</li>
+<li>稀疏 softmax 交叉熵损失函数</li>
+</ol>
+</div>
+</div>
+</div>

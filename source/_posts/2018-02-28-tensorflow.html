@@ -1,5 +1,5 @@
 ---
-title: "tensorflow"
+title: "tensorflow 基础"
 date: 2018-02-28
 layout: post
 categories: 
@@ -46,9 +46,9 @@ comments:
 </p>
 </div>
 </div>
-<div id="outline-container-org1037c62" class="outline-3">
-<h3 id="org1037c62">初始化变量和占位符</h3>
-<div class="outline-text-3" id="text-org1037c62">
+<div id="outline-container-org3260f0c" class="outline-3">
+<h3 id="org3260f0c">初始化<a href="#org35b013c">变量</a>和<a href="#org2d75c4a">占位符</a></h3>
+<div class="outline-text-3" id="text-org3260f0c">
 <p>
 在求解最优化过程中（最小化损失函数），tensorflow 通过占位符获取数据，并调整变量和权重（或偏差）
 </p>
@@ -94,6 +94,35 @@ tensorflow 创建计算图实例，通过占位符赋值，维护变量的状态
 <div class="outline-text-3" id="text-org80a9d32">
 <p>
 所有的机器学习模型一旦训练好，最后都用来预测未知的数据。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0ed6eb6" class="outline-2">
+<h2 id="org0ed6eb6">Tensorflow 中的基本概念</h2>
+<div class="outline-text-2" id="text-org0ed6eb6">
+</div>
+<div id="outline-container-orgb7321c2" class="outline-3">
+<h3 id="orgb7321c2">张量</h3>
+<div class="outline-text-3" id="text-orgb7321c2">
+<p>
+Tensorflow 的主要数据结构是张量，它用张量来操作计算图。Tensorflow 中可以把变量或者占位符声明为张量。
+</p>
+</div>
+</div>
+<div id="outline-container-org35b013c" class="outline-3">
+<h3 id="org35b013c">变量</h3>
+<div class="outline-text-3" id="text-org35b013c">
+<p>
+变量是 Tensorflow 机器学习算法的参数，Tensorflow 维护（调整）这些变量的状态来优化机器学习算法。
+</p>
+</div>
+</div>
+<div id="outline-container-org2d75c4a" class="outline-3">
+<h3 id="org2d75c4a">占位符</h3>
+<div class="outline-text-3" id="text-org2d75c4a">
+<p>
+占位符是 Tensorflow 对象，用于表示输入输出数据的格式，允许传入指定类型和形状的数据，并依赖计算图的计算结果。
 </p>
 </div>
 </div>

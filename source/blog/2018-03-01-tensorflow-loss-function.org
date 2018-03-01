@@ -1,0 +1,33 @@
+#+TITLE: tensorflow 损失函数
+#+DATE: 2018-03-01
+#+SETUPFILE: ~/blog/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: tensorflow
+#+JEKYLL_TAGS: python
+#+JEKYLL_PUBLISHED: true
+
+* L2 正则损失函数（即欧拉损失函数）
+** 方式 
+计算预测值与目标值差值的平方和
+** 特点
+在目标值附近有更好的曲度，机器学习算法利用这点收敛，并且离目标越近收敛越慢
+* L1 正则损失函数（即绝对值损失函数）
+** 方式
+计算预测值和目标值差值的绝对值
+** 特点
+在目标值附近不平滑，会导致算法不能很好地收敛
+* Pseudo-Huber 损失函数
+** 方式
+试图利用 L1 和 L2 正则削减极值处的陡峭，使得目标值附近连续
+** 特点
+是 Huber 损失函数的连续、平滑估计，依赖于参数 delta
+* Hinge 损失函数 
+** 特点
+主要用来评估支持向量机算法，有时用来评估神经网络算法
+* 两类交叉熵损失函数
+** Sigmoid
+1. sigmoid 交叉熵损失函数
+2. 加权 sigmoid 交叉熵损失函数
+** Softmax
+1. softmax 交叉熵损失函数
+2. 稀疏 softmax 交叉熵损失函数
