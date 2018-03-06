@@ -46,9 +46,9 @@ comments:
 </ul>
 </div>
 </div>
-<div id="outline-container-org78a30c8" class="outline-4">
-<h4 id="org78a30c8">组成</h4>
-<div class="outline-text-4" id="text-org78a30c8">
+<div id="outline-container-org56250b5" class="outline-4">
+<h4 id="org56250b5">组成</h4>
+<div class="outline-text-4" id="text-org56250b5">
 </div>
 <ul class="org-ul">
 <li><a id="org4c4ff1c"></a>称为节点的计算设备<br />
@@ -186,9 +186,9 @@ comments:
 <h3 id="org228ae56">因特网</h3>
 <div class="outline-text-3" id="text-org228ae56">
 </div>
-<div id="outline-container-org56250b5" class="outline-4">
-<h4 id="org56250b5">组成</h4>
-<div class="outline-text-4" id="text-org56250b5">
+<div id="outline-container-org1783ec2" class="outline-4">
+<h4 id="org1783ec2">组成</h4>
+<div class="outline-text-4" id="text-org1783ec2">
 <ol class="org-ol">
 <li>因特网边缘</li>
 <li><a href="#org302c90d">接入网</a></li>
@@ -196,9 +196,9 @@ comments:
 </ol>
 </div>
 </div>
-<div id="outline-container-org08b0649" class="outline-4">
-<h4 id="org08b0649">特点</h4>
-<div class="outline-text-4" id="text-org08b0649">
+<div id="outline-container-org622f060" class="outline-4">
+<h4 id="org622f060">特点</h4>
+<div class="outline-text-4" id="text-org622f060">
 <p>
 <b>边缘复杂，核心简单</b> ：遵循“端到端”的原则，即将复杂的网络处理功能置于因特网边缘，而将相对简单的分组交付功能放在因特网核心。
 <b>优点</b> ：充分利用了位于因特网边缘的端系统强大的计算能力，用软件方式处理大量复杂的控制和应用逻辑，而使位于因特网核心的路由器尽可能简单，以高速地转发分组。
@@ -243,8 +243,8 @@ comments:
 </li>
 <li><a id="orgb8e63fa"></a>P2P体系结构（P2P模式）<br />
 <ul class="org-ul">
-<li><a id="org622f060"></a>特点<br />
-<div class="outline-text-6" id="text-org622f060">
+<li><a id="org7c76c1d"></a>特点<br />
+<div class="outline-text-6" id="text-org7c76c1d">
 <ol class="org-ol">
 <li>能够借助对等方的空闲资源而不需要庞大的服务器基础设施的支持，从而降低服务提供商成本</li>
 <li>P2P应用具有群组性、高度分布性和动态性</li>
@@ -431,7 +431,65 @@ comments:
 </div>
 </li>
 
-<li><a id="org98ec0c5"></a>TCP/IP体系结构<br /></li>
+<li><a id="org98ec0c5"></a>TCP/IP体系结构<br />
+<ul class="org-ul">
+<li><a id="org277b364"></a>特点<br />
+<div class="outline-text-6" id="text-org277b364">
+<ol class="org-ol">
+<li>协议栈呈“沙漏型”，IP是体系结构的“细腰”，代表最小的、精选的通用功能集，能够使高层应用与底层通信网技术独立发展</li>
+<li>为了提高系统效率没有严格分层</li>
+</ol>
+</div>
+</li>
+<li><a id="orga3ffc12"></a>重点<br />
+<div class="outline-text-6" id="text-orga3ffc12">
+<ol class="org-ol">
+<li>边缘节点必须实现TCP/IP所有五个层</li>
+<li>交换机只有两层（物理层和数据链路层）</li>
+<li>路由器只有三层（物理层，数据链路层和网络层）</li>
+</ol>
+</div>
+</li>
+<li><a id="org3d39e58"></a>两个子网<br />
+<div class="outline-text-6" id="text-org3d39e58">
+<ol class="org-ol">
+<li>资源子网：应用层和运输层</li>
+<li>通信子网： 物理层，数据链路层和网络层</li>
+</ol>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb311f3b" class="outline-3">
+<h3 id="orgb311f3b">分组交换网的性能指标</h3>
+<div class="outline-text-3" id="text-orgb311f3b">
+</div>
+<div id="outline-container-org2e20aa2" class="outline-4">
+<h4 id="org2e20aa2">重要概念</h4>
+<div class="outline-text-4" id="text-org2e20aa2">
+</div>
+<ul class="org-ul">
+<li><a id="org7f0e333"></a>带宽<br />
+<div class="outline-text-5" id="text-org7f0e333">
+<ol class="org-ol">
+<li>在通信领域指信号具有的频带宽度，单位是赫兹</li>
+<li>指链路在一定时段内所能传输的比特数的额定值，常用单位时Kb/s等（十的次方）</li>
+</ol>
+</div>
+</li>
+<li><a id="orga6c5cdb"></a>时延<br />
+<div class="outline-text-5" id="text-orga6c5cdb">
+<ol class="org-ol">
+<li>处理时延</li>
+<li>排队时延</li>
+<li>传输时延（等于分组长度除以链路带宽）</li>
+<li>传播时延（等于节点间距离除以传播速度）</li>
+</ol>
+</div>
+</li>
 </ul>
 </div>
 </div>
