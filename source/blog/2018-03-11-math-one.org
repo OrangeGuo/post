@@ -1,0 +1,34 @@
+#+TITLE: 高等数学（上） 
+#+DATE: 2015-09-11
+#+SETUPFILE: ~/blog/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: notes
+#+JEKYLL_TAGS: math
+#+JEKYLL_PUBLISHED: true
+
+* 函数 极限 连续
+** 函数
+*** 函数两要素
+函数关系和定义域（后者不能为空集）
+*** 函数关系表示法
+常用的三种：列表法，图示法和公式法
+*** 基本初等函数
+1. 常数函数 y=c （c为常数）
+2. 幂函数 y=x^(\alpha) （\alpha \ne 0 为常数）
+3. 指数函数 y=a^x （0 < a \ne 1 为常数）
+4. 对数函数 y=log_a x （0 < a \ne 为常数）
+5. 三角函数 y=sinx,y=cosx,y=tanx,y=cotx,y=secx,y=cscx
+6. 反三角函数 y=arcsinx,y=arccosx,y=arctanx,y=arccotx
+*** 反函数 
+正反函数的图形对称于直线 y=x
+*** 函数的几何性质
+1. 有界性
+2. 单调性
+3. 奇偶性
+4. 周期性
+*** 初等函数
+由[[*%E5%9F%BA%E6%9C%AC%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0][基本初等函数]]经过有限次四则运算及符合运算所得到的函数称为 *初等函数* 。一般来说，分段函数不是初等函数
+** 极限 
+*** 定义
+设一个数列{y_n}，l为一个定数。如果对于任意给定的正数\varepsilon（不管它多么小），总存在正整数N，使得当n>N时，有
+有极限的数列成为收敛数列，没有极限的数列称为发散数列。
