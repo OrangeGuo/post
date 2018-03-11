@@ -83,8 +83,40 @@ comments:
 <h4 id="orga2d0926">定义</h4>
 <div class="outline-text-4" id="text-orga2d0926">
 <p>
-设一个数列{y<sub>n</sub>}，l为一个定数。如果对于任意给定的正数&epsilon;（不管它多么小），总存在正整数N，使得当n&gt;N时，有
-有极限的数列成为收敛数列，没有极限的数列称为发散数列。
+设一个数列{y<sub>n</sub>}，l为一个定数。如果对于任意给定的正数&epsilon;（不管它多么小），总存在正整数N，使得当n&gt;N时，有|y<sub>n</sub> - l|&lt;&epsilon;,则称数列{y<sub>n</sub>}的极限是l。
+记作：y<sub>n</sub> &rarr; l (n &rarr; &infin;)。 <b>有极限的数列成为收敛数列，没有极限的数列称为发散数列。</b>
+</p>
+</div>
+</div>
+<div id="outline-container-orgf96f6d4" class="outline-4">
+<h4 id="orgf96f6d4">收敛数列的性质</h4>
+<div class="outline-text-4" id="text-orgf96f6d4">
+<p>
+如果数列{y<sub>n</sub>}收敛，则它有以下性质：
+</p>
+<ol class="org-ol">
+<li>它的极限是唯一的</li>
+<li>它是有界的，即&exist; M &gt; 0,&forall; n &rArr; |y<sub>n</sub>| &le; M</li>
+<li>两个收敛数列进行四则运算也收敛</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9e5d818" class="outline-4">
+<h4 id="org9e5d818">数列收敛的判别准则</h4>
+<div class="outline-text-4" id="text-org9e5d818">
+<ul class="org-ul">
+<li>夹逼准则</li>
+</ul>
+
+<p>
+如果数列{x<sub>n</sub>}和{y<sub>n</sub>}的极限都是l，又&exist; N<sub>0</sub>, &forall; n &gt; N<sub>0,有</sub> x<sub>n</sub> &le; z<sub>n</sub> &le; y<sub>n</sub> ,则数列y<sub>n</sub> 的极限也是l。
+</p>
+<ul class="org-ul">
+<li>单调有界准则</li>
+</ul>
+
+<p>
+任何单调有界数列都必收敛，具体地，数列单调增加有上界必收敛；数列单调减少有下界必收敛
 </p>
 </div>
 </div>
