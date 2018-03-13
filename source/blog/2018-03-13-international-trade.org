@@ -1,0 +1,21 @@
+#+TITLE: 国际贸易
+#+DATE: 2018-03-13
+#+SETUPFILE: ~/blog/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: 
+#+JEKYLL_TAGS: 
+#+JEKYLL_PUBLISHED: true
+
+
+* 重要概念
+** 对外贸易额
+出口总额X加上进口总额M
+** 国际贸易额即世界贸易额
+世界出口总额
+** 对外贸易量
+等于对外贸易额除以价格指数
+** 贸易差额
+1. 贸易顺差：出口额大于进口额
+2. 贸易逆差：出口额小于进口额
+3. 贸易平衡：出口额等于进口额
+
