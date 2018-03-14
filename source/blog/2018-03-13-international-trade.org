@@ -2,8 +2,8 @@
 #+DATE: 2018-03-13
 #+SETUPFILE: ~/blog/setupfile.org
 #+JEKYLL_LAYOUT: post
-#+JEKYLL_CATEGORIES: 
-#+JEKYLL_TAGS: 
+#+JEKYLL_CATEGORIES: notes
+#+JEKYLL_TAGS: 随笔 
 #+JEKYLL_PUBLISHED: true
 
 
