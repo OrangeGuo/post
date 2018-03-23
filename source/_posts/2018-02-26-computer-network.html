@@ -46,9 +46,9 @@ comments:
 </ul>
 </div>
 </div>
-<div id="outline-container-org8f178e9" class="outline-4">
-<h4 id="org8f178e9">组成</h4>
-<div class="outline-text-4" id="text-org8f178e9">
+<div id="outline-container-org5cd2ecb" class="outline-4">
+<h4 id="org5cd2ecb">组成</h4>
+<div class="outline-text-4" id="text-org5cd2ecb">
 </div>
 <div id="outline-container-org32e502c" class="outline-5">
 <h5 id="org32e502c">称为节点的计算设备</h5>
@@ -190,9 +190,9 @@ comments:
 <h3 id="org76245c3">因特网</h3>
 <div class="outline-text-3" id="text-org76245c3">
 </div>
-<div id="outline-container-orgaf53e71" class="outline-4">
-<h4 id="orgaf53e71">组成</h4>
-<div class="outline-text-4" id="text-orgaf53e71">
+<div id="outline-container-orge0ed7ff" class="outline-4">
+<h4 id="orge0ed7ff">组成</h4>
+<div class="outline-text-4" id="text-orge0ed7ff">
 <ol class="org-ol">
 <li>因特网边缘</li>
 <li><a href="#org1b29d29">接入网</a></li>
@@ -200,9 +200,9 @@ comments:
 </ol>
 </div>
 </div>
-<div id="outline-container-org07089f1" class="outline-4">
-<h4 id="org07089f1">特点</h4>
-<div class="outline-text-4" id="text-org07089f1">
+<div id="outline-container-org4ec4217" class="outline-4">
+<h4 id="org4ec4217">特点</h4>
+<div class="outline-text-4" id="text-org4ec4217">
 <p>
 <b>边缘复杂，核心简单</b> ：遵循“端到端”的原则，即将复杂的网络处理功能置于因特网边缘，而将相对简单的分组交付功能放在因特网核心。
 <b>优点</b> ：充分利用了位于因特网边缘的端系统强大的计算能力，用软件方式处理大量复杂的控制和应用逻辑，而使位于因特网核心的路由器尽可能简单，以高速地转发分组。
@@ -252,8 +252,8 @@ comments:
 <div class="outline-text-5" id="text-org5b99b42">
 </div>
 <ul class="org-ul">
-<li><a id="org51b0810"></a>特点<br />
-<div class="outline-text-6" id="text-org51b0810">
+<li><a id="orgf881900"></a>特点<br />
+<div class="outline-text-6" id="text-orgf881900">
 <ol class="org-ol">
 <li>能够借助对等方的空闲资源而不需要庞大的服务器基础设施的支持，从而降低服务提供商成本</li>
 <li>P2P应用具有群组性、高度分布性和动态性</li>
@@ -443,8 +443,8 @@ comments:
 <div class="outline-text-5" id="text-org7897127">
 </div>
 <ul class="org-ul">
-<li><a id="org8a081ad"></a>特点<br />
-<div class="outline-text-6" id="text-org8a081ad">
+<li><a id="orgf5c511c"></a>特点<br />
+<div class="outline-text-6" id="text-orgf5c511c">
 <ol class="org-ol">
 <li>协议栈呈“沙漏型”，IP是体系结构的“细腰”，代表最小的、精选的通用功能集，能够使高层应用与底层通信网技术独立发展</li>
 <li>为了提高系统效率没有严格分层</li>
@@ -519,9 +519,9 @@ comments:
 <b>通信的目的</b> 是用电信手段传递报文中的信息。 <b>通信系统</b> 的作用就是将信息从 <b>信源</b> 发送到一个或多个 <b>信宿</b> 。
 </p>
 </div>
-<div id="outline-container-orgd3167b6" class="outline-5">
-<h5 id="orgd3167b6">组成</h5>
-<div class="outline-text-5" id="text-orgd3167b6">
+<div id="outline-container-orgaeddb98" class="outline-5">
+<h5 id="orgaeddb98">组成</h5>
+<div class="outline-text-5" id="text-orgaeddb98">
 <p>
 信源，发送设备，信道，接收设备，信宿
 </p>
@@ -789,6 +789,10 @@ CMDA中将每一个比特时间再划分为m比特的序列，称为 <b>码片</
 <div id="outline-container-org46be1d2" class="outline-3">
 <h3 id="org46be1d2">链路层概述</h3>
 <div class="outline-text-3" id="text-org46be1d2">
+<p>
+<b>链路层的任务</b> 将上层交付的数据报通过单段链路从一个节点传输到相邻的节
+ 点 
+</p>
 </div>
 <div id="outline-container-org9bf42e6" class="outline-4">
 <h4 id="org9bf42e6">网络链路的类型</h4>
@@ -806,6 +810,208 @@ CMDA中将每一个比特时间再划分为m比特的序列，称为 <b>码片</
 网络适配器和节点的驱动程序
 </p>
 </div>
+</div>
+</div>
+
+<div id="outline-container-orgec57272" class="outline-3">
+<h3 id="orgec57272">成帧</h3>
+<div class="outline-text-3" id="text-orgec57272">
+</div>
+<div id="outline-container-orga0d0d04" class="outline-4">
+<h4 id="orga0d0d04">面向比特的协议</h4>
+<div class="outline-text-4" id="text-orga0d0d04">
+<p>
+把帧看成比特的集合，使用 <b>比特填充</b>  解决帧结构不完整的问题
+</p>
+</div>
+</div>
+<div id="outline-container-orgbb293ab" class="outline-4">
+<h4 id="orgbb293ab">面向字节的协议</h4>
+<div class="outline-text-4" id="text-orgbb293ab">
+<p>
+把帧看成字节的集合，使用 <b>字符填充法</b> 解决协议中某些字段长度不固定的问
+题
+</p>
+</div>
+</div>
+<div id="outline-container-org2be3889" class="outline-4">
+<h4 id="org2be3889">PPP</h4>
+<div class="outline-text-4" id="text-org2be3889">
+<p>
+点到点协议
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8ac8563" class="outline-3">
+<h3 id="org8ac8563">差错检测和纠错技术</h3>
+<div class="outline-text-3" id="text-org8ac8563">
+<p>
+两种方法处理帧出现的差错：
+</p>
+<ul class="org-ul">
+<li>检错重传</li>
+<li>前向纠错</li>
+</ul>
+</div>
+<div id="outline-container-orga1129ee" class="outline-4">
+<h4 id="orga1129ee">奇偶检验</h4>
+<div class="outline-text-4" id="text-orga1129ee">
+<p>
+二维奇偶检验
+</p>
+</div>
+</div>
+<div id="outline-container-org580ce3e" class="outline-4">
+<h4 id="org580ce3e">检验和方法</h4>
+<div class="outline-text-4" id="text-org580ce3e">
+<p>
+互联网校验和
+</p>
+</div>
+</div>
+<div id="outline-container-orge6eb651" class="outline-4">
+<h4 id="orge6eb651">循环冗余检验</h4>
+</div>
+</div>
+<div id="outline-container-orga360b24" class="outline-3">
+<h3 id="orga360b24">可靠数据传输原理</h3>
+<div class="outline-text-3" id="text-orga360b24">
+</div>
+<div id="outline-container-orge2bb6d4" class="outline-4">
+<h4 id="orge2bb6d4">流水线可靠数据传输协议（连续ARQ）</h4>
+</div>
+<div id="outline-container-orgf454234" class="outline-4">
+<h4 id="orgf454234">回退N步协议（滑动窗口协议） GBN</h4>
+</div>
+<div id="outline-container-orge84c0ec" class="outline-4">
+<h4 id="orge84c0ec">选择重传协议 SR</h4>
+</div>
+</div>
+<div id="outline-container-orgdedcdf1" class="outline-3">
+<h3 id="orgdedcdf1">多路访问</h3>
+<div class="outline-text-3" id="text-orgdedcdf1">
+<p>
+协调多个发送节点和接收节点访问同一个公共信道
+</p>
+</div>
+<div id="outline-container-orgeb1b5f6" class="outline-4">
+<h4 id="orgeb1b5f6">信道划分协议</h4>
+<div class="outline-text-4" id="text-orgeb1b5f6">
+<ul class="org-ul">
+<li>时分多路复用</li>
+<li>频分多路复用</li>
+<li>码分多址</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd0670a2" class="outline-4">
+<h4 id="orgd0670a2">轮流协议</h4>
+<div class="outline-text-4" id="text-orgd0670a2">
+</div>
+<div id="outline-container-orgf03d73e" class="outline-5">
+<h5 id="orgf03d73e">IEEE 802.5 令牌环</h5>
+<div class="outline-text-5" id="text-orgf03d73e">
+<p>
+具有优先级处理机制；令牌是一种用于控制目的的帧
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org37fa55c"></a>工作状态<br />
+<ul class="org-ul">
+<li><a id="org05a4932"></a>发送方式<br />
+<div class="outline-text-7" id="text-org05a4932">
+<ol class="org-ol">
+<li>截获令牌</li>
+<li>回收发出的帧</li>
+<li>产生新的令牌</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org47c27d8"></a>接收方式<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org98cd551" class="outline-5">
+<h5 id="org98cd551">IEEE 802.4 令牌总线</h5>
+<div class="outline-text-5" id="text-org98cd551">
+<p>
+<b>拓扑结构</b> 物理上为总线型，逻辑上是环型
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9db40d2" class="outline-4">
+<h4 id="org9db40d2">随机接入协议</h4>
+<div class="outline-text-4" id="text-org9db40d2">
+</div>
+<div id="outline-container-orgcac3bbd" class="outline-5">
+<h5 id="orgcac3bbd">ALOHA协议</h5>
+<div class="outline-text-5" id="text-orgcac3bbd">
+<p>
+该协议定义了一种用于解决在分组无线通信系统中分配广播信道的分布式方法。
+操作如下：
+</p>
+<ol class="org-ol">
+<li>当节点获得新帧，将随时发送</li>
+<li>若无碰撞，节点能连续发送新帧</li>
+<li>若碰撞，节点可以检测到</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgca1ab10" class="outline-5">
+<h5 id="orgca1ab10">时隙ALOHA协议</h5>
+<div class="outline-text-5" id="text-orgca1ab10">
+<p>
+<b>优点</b> 
+</p>
+<ol class="org-ol">
+<li>单个活跃节点能够连续以信道全速传输</li>
+<li>减少碰撞的概率</li>
+<li>简单</li>
+</ol>
+
+<p>
+<b>缺点</b> 节点时钟同步困难
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfa54fdb" class="outline-3">
+<h3 id="orgfa54fdb">以太网 IEEE 802.3</h3>
+<div class="outline-text-3" id="text-orgfa54fdb">
+<p>
+<b>优点</b>
+</p>
+<ol class="org-ol">
+<li>以太网技术简单</li>
+<li>以太网最先被广泛使用，具有先发优势</li>
+<li>数据传输速率更高</li>
+</ol>
+
+<p>
+<b>数据链路层两个子层</b>
+</p>
+<ol class="org-ol">
+<li>逻辑链路控制子层 LLC</li>
+<li>媒体接入控制子层 MAC</li>
+</ol>
+
+<p>
+<b>NIC网卡</b> 
+</p>
+<ol class="org-ol">
+<li>进行串行并行转换</li>
+<li>对数据进行缓存</li>
+<li>对数据进行封装与解封</li>
+<li>编码与译码</li>
+<li>链路管理</li>
+</ol>
 </div>
 </div>
 </div>
