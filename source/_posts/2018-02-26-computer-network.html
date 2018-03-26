@@ -46,9 +46,9 @@ comments:
 </ul>
 </div>
 </div>
-<div id="outline-container-org5cd2ecb" class="outline-4">
-<h4 id="org5cd2ecb">组成</h4>
-<div class="outline-text-4" id="text-org5cd2ecb">
+<div id="outline-container-orgaeddb98" class="outline-4">
+<h4 id="orgaeddb98">组成</h4>
+<div class="outline-text-4" id="text-orgaeddb98">
 </div>
 <div id="outline-container-org32e502c" class="outline-5">
 <h5 id="org32e502c">称为节点的计算设备</h5>
@@ -190,9 +190,9 @@ comments:
 <h3 id="org76245c3">因特网</h3>
 <div class="outline-text-3" id="text-org76245c3">
 </div>
-<div id="outline-container-orge0ed7ff" class="outline-4">
-<h4 id="orge0ed7ff">组成</h4>
-<div class="outline-text-4" id="text-orge0ed7ff">
+<div id="outline-container-orgac326d3" class="outline-4">
+<h4 id="orgac326d3">组成</h4>
+<div class="outline-text-4" id="text-orgac326d3">
 <ol class="org-ol">
 <li>因特网边缘</li>
 <li><a href="#org1b29d29">接入网</a></li>
@@ -200,9 +200,9 @@ comments:
 </ol>
 </div>
 </div>
-<div id="outline-container-org4ec4217" class="outline-4">
-<h4 id="org4ec4217">特点</h4>
-<div class="outline-text-4" id="text-org4ec4217">
+<div id="outline-container-orgf5c511c" class="outline-4">
+<h4 id="orgf5c511c">特点</h4>
+<div class="outline-text-4" id="text-orgf5c511c">
 <p>
 <b>边缘复杂，核心简单</b> ：遵循“端到端”的原则，即将复杂的网络处理功能置于因特网边缘，而将相对简单的分组交付功能放在因特网核心。
 <b>优点</b> ：充分利用了位于因特网边缘的端系统强大的计算能力，用软件方式处理大量复杂的控制和应用逻辑，而使位于因特网核心的路由器尽可能简单，以高速地转发分组。
@@ -252,8 +252,8 @@ comments:
 <div class="outline-text-5" id="text-org5b99b42">
 </div>
 <ul class="org-ul">
-<li><a id="orgf881900"></a>特点<br />
-<div class="outline-text-6" id="text-orgf881900">
+<li><a id="org052f21a"></a>特点<br />
+<div class="outline-text-6" id="text-org052f21a">
 <ol class="org-ol">
 <li>能够借助对等方的空闲资源而不需要庞大的服务器基础设施的支持，从而降低服务提供商成本</li>
 <li>P2P应用具有群组性、高度分布性和动态性</li>
@@ -443,8 +443,8 @@ comments:
 <div class="outline-text-5" id="text-org7897127">
 </div>
 <ul class="org-ul">
-<li><a id="orgf5c511c"></a>特点<br />
-<div class="outline-text-6" id="text-orgf5c511c">
+<li><a id="orge64dea4"></a>特点<br />
+<div class="outline-text-6" id="text-orge64dea4">
 <ol class="org-ol">
 <li>协议栈呈“沙漏型”，IP是体系结构的“细腰”，代表最小的、精选的通用功能集，能够使高层应用与底层通信网技术独立发展</li>
 <li>为了提高系统效率没有严格分层</li>
@@ -519,9 +519,9 @@ comments:
 <b>通信的目的</b> 是用电信手段传递报文中的信息。 <b>通信系统</b> 的作用就是将信息从 <b>信源</b> 发送到一个或多个 <b>信宿</b> 。
 </p>
 </div>
-<div id="outline-container-orgaeddb98" class="outline-5">
-<h5 id="orgaeddb98">组成</h5>
-<div class="outline-text-5" id="text-orgaeddb98">
+<div id="outline-container-orge52719d" class="outline-5">
+<h5 id="orge52719d">组成</h5>
+<div class="outline-text-5" id="text-orge52719d">
 <p>
 信源，发送设备，信道，接收设备，信宿
 </p>
@@ -1012,6 +1012,41 @@ CMDA中将每一个比特时间再划分为m比特的序列，称为 <b>码片</
 <li>编码与译码</li>
 <li>链路管理</li>
 </ol>
+</div>
+<div id="outline-container-orgc3c668c" class="outline-4">
+<h4 id="orgc3c668c">MAC地址</h4>
+<div class="outline-text-4" id="text-orgc3c668c">
+<p>
+以太网工作在数据链路层，乙太网适配器具有唯一的链路层地址：局域网地址，
+物理地址，硬件地址或MAC地址（在网卡上）
+</p>
+</div>
+</div>
+<div id="outline-container-orgf78b1cd" class="outline-4">
+<h4 id="orgf78b1cd">以太网的多路访问协议 CSMA/DA</h4>
+<div class="outline-text-4" id="text-orgf78b1cd">
+<p>
+<b>工作机制</b> ：
+</p>
+<ol class="org-ol">
+<li>可以在任意时刻发送帧的非同步机制</li>
+<li>发送前若侦听到其他适配器在正在传输，决不会传输帧的“发前先听”机制</li>
+<li>传输中适配器一旦检测到另一个适配器正在传输，就中止自己传输的“碰撞检测”机制</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgeab6234" class="outline-4">
+<h4 id="orgeab6234">以太网提供的是不可靠无连接服务</h4>
+</div>
+</div>
+
+<div id="outline-container-orgd12e378" class="outline-3">
+<h3 id="orgd12e378">局域网</h3>
+<div class="outline-text-3" id="text-orgd12e378">
+<p>
+用多个中继器或集线器可连接成更大局域网。物理层集线器的拓扑结构，在物理上是星型结构，
+在逻辑上是总线型结构。
+</p>
 </div>
 </div>
 </div>
