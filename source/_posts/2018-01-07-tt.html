@@ -5,18 +5,18 @@ layout: post
 categories: 
 - review
 tags: 
-- exam
+- 复习笔记
 published: true
 comments: 
 ---
 
-<div id="outline-container-org49a5b1c" class="outline-2">
-<h2 id="org49a5b1c">编译概述</h2>
-<div class="outline-text-2" id="text-org49a5b1c">
+<div id="outline-container-org18b9ed5" class="outline-2">
+<h2 id="org18b9ed5">编译概述</h2>
+<div class="outline-text-2" id="text-org18b9ed5">
 </div>
-<div id="outline-container-org799a010" class="outline-3">
-<h3 id="org799a010">语言处理程序</h3>
-<div class="outline-text-3" id="text-org799a010">
+<div id="outline-container-orgd5f2b80" class="outline-3">
+<h3 id="orgd5f2b80">语言处理程序</h3>
+<div class="outline-text-3" id="text-orgd5f2b80">
 <ul class="org-ul">
 <li><b>定义</b> 使计算机能理解人们提供的命令与输入的程序。</li>
 </ul>
@@ -58,14 +58,14 @@ comments:
 </ul>
 </div>
 </div>
-<div id="outline-container-orge144a0d" class="outline-3">
-<h3 id="orge144a0d">编译程序的逻辑结构</h3>
-<div class="outline-text-3" id="text-orge144a0d">
+<div id="outline-container-org15b6b06" class="outline-3">
+<h3 id="org15b6b06">编译程序的逻辑结构</h3>
+<div class="outline-text-3" id="text-org15b6b06">
 <img src="/images/compiler1.png" alt="Drawing" width="400px" />
 </div>
-<div id="outline-container-org1d1b5dd" class="outline-4">
-<h4 id="org1d1b5dd">编译前端和后端</h4>
-<div class="outline-text-4" id="text-org1d1b5dd">
+<div id="outline-container-orgbe1cebd" class="outline-4">
+<h4 id="orgbe1cebd">编译前端和后端</h4>
+<div class="outline-text-4" id="text-orgbe1cebd">
 <ul class="org-ul">
 <li><b>编译前端</b> 主要由与源语言有关的但与目标机无关的那些部分组成（通常包括词法分析，语法分析，语义分析与中间代码产生，有时候也包含代码优化）。</li>
 <li><b>编译后端</b> 包括编译程序中与目标机有关的那些部分，仅仅依赖于中间语言（如与目标机有关的代码优化和目标代码生成等）。</li>
@@ -74,41 +74,41 @@ comments:
 </div>
 </div>
 </div>
-<div id="outline-container-orgc71585a" class="outline-3">
-<h3 id="orgc71585a"><a href="#org62a9a41">词法分析</a></h3>
-<div class="outline-text-3" id="text-orgc71585a">
+<div id="outline-container-org29db92e" class="outline-3">
+<h3 id="org29db92e"><a href="#org635871c">词法分析</a></h3>
+<div class="outline-text-3" id="text-org29db92e">
 <p>
 分析源程序的结构，判断是否为相应程序中的一个合法程序。
 </p>
 </div>
 </div>
-<div id="outline-container-orgc35150c" class="outline-3">
-<h3 id="orgc35150c">语义分析</h3>
-<div class="outline-text-3" id="text-orgc35150c">
+<div id="outline-container-orgcf8b9e8" class="outline-3">
+<h3 id="orgcf8b9e8">语义分析</h3>
+<div class="outline-text-3" id="text-orgcf8b9e8">
 <p>
 规定各语法成分的含义或功能（规定它们的属性或在程序执行时应进行的运算及操作，语法检查）。
 </p>
 </div>
 </div>
-<div id="outline-container-org68436bd" class="outline-3">
-<h3 id="org68436bd">中间代码生成</h3>
-<div class="outline-text-3" id="text-org68436bd">
+<div id="outline-container-orgd0a8242" class="outline-3">
+<h3 id="orgd0a8242">中间代码生成</h3>
+<div class="outline-text-3" id="text-orgd0a8242">
 <p>
 <b>好处</b> 处理上方便，便于优化移植。
 </p>
 </div>
 </div>
-<div id="outline-container-org6263ae9" class="outline-3">
-<h3 id="org6263ae9"><a href="#orgd1f0da8">代码优化</a></h3>
-<div class="outline-text-3" id="text-org6263ae9">
+<div id="outline-container-org7d96ea1" class="outline-3">
+<h3 id="org7d96ea1"><a href="#org3228be4">代码优化</a></h3>
+<div class="outline-text-3" id="text-org7d96ea1">
 <p>
 <b>原因</b> 上述阶段较多的考虑语法与语义上的共性，而对源程序间出现的差异考虑较少，所以代码效率较低。
 </p>
 </div>
 </div>
-<div id="outline-container-org851cc3a" class="outline-3">
-<h3 id="org851cc3a">目标代码生成</h3>
-<div class="outline-text-3" id="text-org851cc3a">
+<div id="outline-container-org0a924fd" class="outline-3">
+<h3 id="org0a924fd">目标代码生成</h3>
+<div class="outline-text-3" id="text-org0a924fd">
 <ul class="org-ul">
 <li><b>目的</b> 接受中间代码，将其翻译为机器语言或汇编语言形式的目标程序。</li>
 <li><b>要求</b> 生成代码尽可能短；充分发挥计算机可用资源的效率。</li>
@@ -123,17 +123,17 @@ comments:
 </ul>
 </div>
 </div>
-<div id="outline-container-org3a7ed81" class="outline-3">
-<h3 id="org3a7ed81">错误检查和处理程序</h3>
-<div class="outline-text-3" id="text-org3a7ed81">
+<div id="outline-container-org7ee1023" class="outline-3">
+<h3 id="org7ee1023">错误检查和处理程序</h3>
+<div class="outline-text-3" id="text-org7ee1023">
 <p>
 报告错误的种类，出现的位置以及一定的纠错能力。
 </p>
 </div>
 </div>
-<div id="outline-container-orgb770dcc" class="outline-3">
-<h3 id="orgb770dcc">信息表管理</h3>
-<div class="outline-text-3" id="text-orgb770dcc">
+<div id="outline-container-org0c7c8f1" class="outline-3">
+<h3 id="org0c7c8f1">信息表管理</h3>
+<div class="outline-text-3" id="text-org0c7c8f1">
 <p>
 <b>三类数据</b>
 </p>
@@ -144,9 +144,9 @@ comments:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb56b940" class="outline-3">
-<h3 id="orgb56b940">编译程序的组织</h3>
-<div class="outline-text-3" id="text-orgb56b940">
+<div id="outline-container-org60871b4" class="outline-3">
+<h3 id="org60871b4">编译程序的组织</h3>
+<div class="outline-text-3" id="text-org60871b4">
 <p>
 <b>多遍扫描的优点</b> 
 </p>
@@ -159,9 +159,9 @@ comments:
 </div>
 </div>
 </div>
-<div id="outline-container-org590abf0" class="outline-2">
-<h2 id="org590abf0">文法和语言</h2>
-<div class="outline-text-2" id="text-org590abf0">
+<div id="outline-container-org882a33b" class="outline-2">
+<h2 id="org882a33b">文法和语言</h2>
+<div class="outline-text-2" id="text-org882a33b">
 <p>
 <b>三种定义语言的方法</b>
 </p>
@@ -197,9 +197,9 @@ comments:
 </tbody>
 </table>
 </div>
-<div id="outline-container-org39ff5bb" class="outline-3">
-<h3 id="org39ff5bb">文法定义</h3>
-<div class="outline-text-3" id="text-org39ff5bb">
+<div id="outline-container-org15b21d9" class="outline-3">
+<h3 id="org15b21d9">文法定义</h3>
+<div class="outline-text-3" id="text-org15b21d9">
 <p>
 G[S]=(V<sub>N</sub> ,V<sub>T</sub> ,P,S)
 </p>
@@ -241,34 +241,34 @@ G[S]=(V<sub>N</sub> ,V<sub>T</sub> ,P,S)
 </table>
 </div>
 </div>
-<div id="outline-container-org9e00c43" class="outline-3">
-<h3 id="org9e00c43">文法和语言的关系</h3>
-<div class="outline-text-3" id="text-org9e00c43">
+<div id="outline-container-orgcd5348f" class="outline-3">
+<h3 id="orgcd5348f">文法和语言的关系</h3>
+<div class="outline-text-3" id="text-orgcd5348f">
 <p>
 一个文法产生唯一的语言，但一个语言可由若干个不同的文法表示。
 </p>
 </div>
 </div>
-<div id="outline-container-org14ad44f" class="outline-3">
-<h3 id="org14ad44f">句型的分析</h3>
-<div class="outline-text-3" id="text-org14ad44f">
+<div id="outline-container-orgc4f947b" class="outline-3">
+<h3 id="orgc4f947b">句型的分析</h3>
+<div class="outline-text-3" id="text-orgc4f947b">
 <ul class="org-ul">
 <li><b>左句型</b> 能由最左推导推导出的句型成为左句型，同理可得右句型；</li>
 <li><b>最右推导</b> 被称为 <b>规范推导</b>;</li>
 <li>由规范推导推导出的句型称为 <b>规范句型</b>;</li>
 </ul>
 </div>
-<div id="outline-container-org69c2ffc" class="outline-4">
-<h4 id="org69c2ffc">最左推导</h4>
-<div class="outline-text-4" id="text-org69c2ffc">
+<div id="outline-container-org00a84ab" class="outline-4">
+<h4 id="org00a84ab">最左推导</h4>
+<div class="outline-text-4" id="text-org00a84ab">
 <p>
 任何一步&alpha; &rArr; &beta; 都是对&alpha; 中的最左非终结符进行替换。
 </p>
 </div>
 </div>
-<div id="outline-container-orgfd3d42f" class="outline-4">
-<h4 id="orgfd3d42f">语法树和二义性</h4>
-<div class="outline-text-4" id="text-orgfd3d42f">
+<div id="outline-container-org58ad597" class="outline-4">
+<h4 id="org58ad597">语法树和二义性</h4>
+<div class="outline-text-4" id="text-org58ad597">
 <ol class="org-ol">
 <li><b>语法树</b> 可以用来表示一个文法所描述语言的句型结构。</li>
 <li>如果一个文法所描述语言的某个句子对应不止一棵语法树，则成该文法为 <b>二义性文法</b> .</li>
@@ -278,50 +278,50 @@ G[S]=(V<sub>N</sub> ,V<sub>T</sub> ,P,S)
 </div>
 </div>
 </div>
-<div id="outline-container-org8ff64a3" class="outline-3">
-<h3 id="org8ff64a3">文法简化和改造</h3>
-<div class="outline-text-3" id="text-org8ff64a3">
+<div id="outline-container-orgf183958" class="outline-3">
+<h3 id="orgf183958">文法简化和改造</h3>
+<div class="outline-text-3" id="text-orgf183958">
 </div>
-<div id="outline-container-orgd4b194b" class="outline-4">
-<h4 id="orgd4b194b">无用符号及无用产生式的消除</h4>
+<div id="outline-container-org533822f" class="outline-4">
+<h4 id="org533822f">无用符号及无用产生式的消除</h4>
 </div>
-<div id="outline-container-org71becbf" class="outline-4">
-<h4 id="org71becbf">单产生式的消除</h4>
+<div id="outline-container-orge3f99f0" class="outline-4">
+<h4 id="orge3f99f0">单产生式的消除</h4>
 </div>
 </div>
-<div id="outline-container-orgef5fe6a" class="outline-3">
-<h3 id="orgef5fe6a">文法和语言的乔姆斯基分类</h3>
-<div class="outline-text-3" id="text-orgef5fe6a">
+<div id="outline-container-orgc364524" class="outline-3">
+<h3 id="orgc364524">文法和语言的乔姆斯基分类</h3>
+<div class="outline-text-3" id="text-orgc364524">
 </div>
-<div id="outline-container-orgc0539f6" class="outline-4">
-<h4 id="orgc0539f6">0型文法或短语结构文法PSG(0型语言，短语文法)</h4>
-<div class="outline-text-4" id="text-orgc0539f6">
+<div id="outline-container-org7968af3" class="outline-4">
+<h4 id="org7968af3">0型文法或短语结构文法PSG(0型语言，短语文法)</h4>
+<div class="outline-text-4" id="text-org7968af3">
 <p>
 每个产生式&alpha; &rarr; &beta;,&alpha; &isin; (V<sub>N</sub> &cup; V<sub>T</sub> )<sup>*</sup> 且至少含有一个非终结符,&beta; &isin; (V<sub>N</sub> &cup; V<sub>T</sub> )<sup>*</sup> 。
 </p>
 </div>
 </div>
-<div id="outline-container-orgef43958" class="outline-4">
-<h4 id="orgef43958">1型文法或前后文有关文法CSG(1型语言)</h4>
-<div class="outline-text-4" id="text-orgef43958">
+<div id="outline-container-org86c0b00" class="outline-4">
+<h4 id="org86c0b00">1型文法或前后文有关文法CSG(1型语言)</h4>
+<div class="outline-text-4" id="text-org86c0b00">
 <p>
 在0型文法上增加限制，对于每个产生式：
 &alpha; &rarr; &beta;,|&alpha;|&le;|&beta;|,仅仅S &rarr; &epsilon; 例外，但S不得出现在任何产生式的右部。
 </p>
 </div>
 </div>
-<div id="outline-container-org11c8f28" class="outline-4">
-<h4 id="org11c8f28">2型文法或前后文无关文法CFG(2型语言)</h4>
-<div class="outline-text-4" id="text-org11c8f28">
+<div id="outline-container-orga1776e5" class="outline-4">
+<h4 id="orga1776e5">2型文法或前后文无关文法CFG(2型语言)</h4>
+<div class="outline-text-4" id="text-orga1776e5">
 <p>
 非终结符的替换不考虑上下文：
 A &rarr; &beta; ,A &isin; V<sub>N</sub> , &beta; &isin; (V<sub>N</sub> &cup; V<sub>T</sub> )<sup>*</sup> 。
 </p>
 </div>
 </div>
-<div id="outline-container-org7736bc7" class="outline-4">
-<h4 id="org7736bc7">3型文法或正规文法（左线性文法和右线性文法）</h4>
-<div class="outline-text-4" id="text-org7736bc7">
+<div id="outline-container-org895f157" class="outline-4">
+<h4 id="org895f157">3型文法或正规文法（左线性文法和右线性文法）</h4>
+<div class="outline-text-4" id="text-org895f157">
 <p>
 <b>右线性文法</b> A &rarr;&alpha; B或A &rarr; &alpha; ,&alpha; &isin; V<sub>T</sub><sup>*</sup> ,A,B &isin; V<sub>N</sub> 。
 </p>
@@ -330,22 +330,22 @@ A &rarr; &beta; ,A &isin; V<sub>N</sub> , &beta; &isin; (V<sub>N</sub> &cup; V<s
 </div>
 </div>
 </div>
-<div id="outline-container-orgd45987c" class="outline-2">
-<h2 id="orgd45987c">程序设计语言</h2>
-<div class="outline-text-2" id="text-orgd45987c">
+<div id="outline-container-org6f7b2fd" class="outline-2">
+<h2 id="org6f7b2fd">程序设计语言</h2>
+<div class="outline-text-2" id="text-org6f7b2fd">
 </div>
-<div id="outline-container-org856c75e" class="outline-3">
-<h3 id="org856c75e">构造基础</h3>
-<div class="outline-text-3" id="text-org856c75e">
+<div id="outline-container-orgb69aab6" class="outline-3">
+<h3 id="orgb69aab6">构造基础</h3>
+<div class="outline-text-3" id="text-orgb69aab6">
 <ul class="org-ul">
 <li><b>基本功能</b> 定义运算对象和对对象的运算</li>
 <li><b>分类</b> 数据型对象和程序型对象</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc7da227" class="outline-3">
-<h3 id="orgc7da227">运行时存储管理</h3>
-<div class="outline-text-3" id="text-orgc7da227">
+<div id="outline-container-org93d8111" class="outline-3">
+<h3 id="org93d8111">运行时存储管理</h3>
+<div class="outline-text-3" id="text-org93d8111">
 <p>
 <b>存储分配策略</b>
 </p>
@@ -356,9 +356,9 @@ A &rarr; &beta; ,A &isin; V<sub>N</sub> , &beta; &isin; (V<sub>N</sub> &cup; V<s
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc481dcf" class="outline-3">
-<h3 id="orgc481dcf">参数传递</h3>
-<div class="outline-text-3" id="text-orgc481dcf">
+<div id="outline-container-org53db25c" class="outline-3">
+<h3 id="org53db25c">参数传递</h3>
+<div class="outline-text-3" id="text-org53db25c">
 <ul class="org-ul">
 <li>传地址</li>
 <li>传值</li>
@@ -370,25 +370,25 @@ A &rarr; &beta; ,A &isin; V<sub>N</sub> , &beta; &isin; (V<sub>N</sub> &cup; V<s
 </div>
 </div>
 </div>
-<div id="outline-container-org62a9a41" class="outline-2">
-<h2 id="org62a9a41">词法分析</h2>
-<div class="outline-text-2" id="text-org62a9a41">
+<div id="outline-container-org635871c" class="outline-2">
+<h2 id="org635871c">词法分析</h2>
+<div class="outline-text-2" id="text-org635871c">
 </div>
-<div id="outline-container-orgc8c64ae" class="outline-3">
-<h3 id="orgc8c64ae">正规文法与状态转换图</h3>
-<div class="outline-text-3" id="text-orgc8c64ae">
+<div id="outline-container-org8f6f9ae" class="outline-3">
+<h3 id="org8f6f9ae">正规文法与状态转换图</h3>
+<div class="outline-text-3" id="text-org8f6f9ae">
 <p>
 状态矩阵；
 </p>
 </div>
 </div>
-<div id="outline-container-org4692297" class="outline-3">
-<h3 id="org4692297">有限自动机</h3>
-<div class="outline-text-3" id="text-org4692297">
+<div id="outline-container-org9681993" class="outline-3">
+<h3 id="org9681993">有限自动机</h3>
+<div class="outline-text-3" id="text-org9681993">
 </div>
-<div id="outline-container-org2116532" class="outline-4">
-<h4 id="org2116532">组成</h4>
-<div class="outline-text-4" id="text-org2116532">
+<div id="outline-container-orgcfb4b93" class="outline-4">
+<h4 id="orgcfb4b93">组成</h4>
+<div class="outline-text-4" id="text-orgcfb4b93">
 <p>
 DFAM = ( K,&Sigma; ,f,s<sub>0,Z</sub>) 
 </p>
@@ -430,17 +430,17 @@ DFAM = ( K,&Sigma; ,f,s<sub>0,Z</sub>)
 </table>
 </div>
 </div>
-<div id="outline-container-org1c44749" class="outline-4">
-<h4 id="org1c44749">定理</h4>
-<div class="outline-text-4" id="text-org1c44749">
+<div id="outline-container-org5d3df8f" class="outline-4">
+<h4 id="org5d3df8f">定理</h4>
+<div class="outline-text-4" id="text-org5d3df8f">
 <ol class="org-ol">
 <li>对于&Sigma; 上任一NFAM必存在同一&Sigma; 上等价DFAM;</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgbddf26b" class="outline-4">
-<h4 id="orgbddf26b">正规表达式与正规集</h4>
-<div class="outline-text-4" id="text-orgbddf26b">
+<div id="outline-container-orgefb6876" class="outline-4">
+<h4 id="orgefb6876">正规表达式与正规集</h4>
+<div class="outline-text-4" id="text-orgefb6876">
 <ul class="org-ul">
 <li>最小化算法；</li>
 <li>具有&epsilon; 动作的有限自动机确定化；</li>
@@ -450,26 +450,26 @@ DFAM = ( K,&Sigma; ,f,s<sub>0,Z</sub>)
 </div>
 </div>
 </div>
-<div id="outline-container-orgb3e8b6f" class="outline-2">
-<h2 id="orgb3e8b6f">语法分析</h2>
-<div class="outline-text-2" id="text-orgb3e8b6f">
+<div id="outline-container-org0160e58" class="outline-2">
+<h2 id="org0160e58">语法分析</h2>
+<div class="outline-text-2" id="text-org0160e58">
 </div>
-<div id="outline-container-org6dca522" class="outline-3">
-<h3 id="org6dca522">分析方法</h3>
-<div class="outline-text-3" id="text-org6dca522">
+<div id="outline-container-orgc7eddb5" class="outline-3">
+<h3 id="orgc7eddb5">分析方法</h3>
+<div class="outline-text-3" id="text-orgc7eddb5">
 </div>
-<div id="outline-container-org371d54e" class="outline-4">
-<h4 id="org371d54e">自顶向下</h4>
-<div class="outline-text-4" id="text-org371d54e">
+<div id="outline-container-org4094a1b" class="outline-4">
+<h4 id="org4094a1b">自顶向下</h4>
+<div class="outline-text-4" id="text-org4094a1b">
 <ul class="org-ul">
 <li>确定：对文法有一定限制，但实现简单、直观；</li>
 <li>不确定：实际上是穷举试探法，效率低代价高；</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9207eba" class="outline-4">
-<h4 id="org9207eba">自底向上</h4>
-<div class="outline-text-4" id="text-org9207eba">
+<div id="outline-container-org9eb4183" class="outline-4">
+<h4 id="org9eb4183">自底向上</h4>
+<div class="outline-text-4" id="text-org9eb4183">
 <ul class="org-ul">
 <li>算符优先分析；</li>
 <li>LR分析；</li>
@@ -477,34 +477,33 @@ DFAM = ( K,&Sigma; ,f,s<sub>0,Z</sub>)
 </div>
 </div>
 </div>
-<div id="outline-container-org6d641c8" class="outline-3">
-<h3 id="org6d641c8">自顶向下的语法分析</h3>
-<div class="outline-text-3" id="text-org6d641c8">
+<div id="outline-container-org10bdb4c" class="outline-3">
+<h3 id="org10bdb4c">自顶向下的语法分析</h3>
+<div class="outline-text-3" id="text-org10bdb4c">
 <ul class="org-ul">
 <li>消除左递归；</li>
 <li>解决回朔问题（提取公共左因子）；</li>
 <li>确定符号串的错误地点；</li>
 </ul>
 </div>
-<div id="outline-container-org0b5b378" class="outline-4">
-<h4 id="org0b5b378">LL(1) 文法</h4>
-<div class="outline-text-4" id="text-org0b5b378">
+<div id="outline-container-orga2a5cbb" class="outline-4">
+<h4 id="orga2a5cbb">LL(1) 文法</h4>
+<div class="outline-text-4" id="text-orga2a5cbb">
 </div>
-<ul class="org-ul">
-<li><a id="orge86237a"></a>条件<br />
-<div class="outline-text-5" id="text-orge86237a">
+<div id="outline-container-orgb1af423" class="outline-5">
+<h5 id="orgb1af423">条件</h5>
+<div class="outline-text-5" id="text-orgb1af423">
 <ol class="org-ol">
 <li>文法不含左递归；</li>
 <li>对于文法中每个非终结符A的各个产生式的候选首符集两两不相交：A&rarr;&alpha;<sub>1</sub>|&alpha;<sub>2</sub>|&#x2026;|&alpha;<sub>n</sub> ,FIRST(&alpha;<sub>i</sub>) &cap; FIRST(&alpha;<sub>j</sub>)=&phi;;</li>
 <li>对于文法中每个非终结符A,若它存在某个候选式首符集包含&epsilon; ,则FIRST(A) &cap; FOLLOW(A)=&phi;;</li>
 </ol>
 </div>
-</li>
-</ul>
 </div>
-<div id="outline-container-org6682b19" class="outline-4">
-<h4 id="org6682b19">结论</h4>
-<div class="outline-text-4" id="text-org6682b19">
+</div>
+<div id="outline-container-org6fa476b" class="outline-4">
+<h4 id="org6fa476b">结论</h4>
+<div class="outline-text-4" id="text-org6fa476b">
 <ol class="org-ol">
 <li>任何LL1文法都不是二义性文法；</li>
 <li>左递归文法不是LL1文法；</li>
@@ -516,50 +515,49 @@ DFAM = ( K,&Sigma; ,f,s<sub>0,Z</sub>)
 </div>
 </div>
 </div>
-<div id="outline-container-org881310e" class="outline-3">
-<h3 id="org881310e">自底向上的语法分析</h3>
-<div class="outline-text-3" id="text-org881310e">
+<div id="outline-container-org2e943e5" class="outline-3">
+<h3 id="org2e943e5">自底向上的语法分析</h3>
+<div class="outline-text-3" id="text-org2e943e5">
 <ul class="org-ul">
 <li>如何在规约过程中发现句柄；</li>
 </ul>
 </div>
-<div id="outline-container-orga112a27" class="outline-4">
-<h4 id="orga112a27">简单文法</h4>
-<div class="outline-text-4" id="text-orga112a27">
+<div id="outline-container-org6a2a177" class="outline-4">
+<h4 id="org6a2a177">简单文法</h4>
+<div class="outline-text-4" id="text-org6a2a177">
 <p>
 若一个文法G的任意两个符号间至多存在一种优先关系，并且任意两个不同产生式均无相同的右部。
 </p>
 </div>
 </div>
-<div id="outline-container-org538d74b" class="outline-4">
-<h4 id="org538d74b">算符文法</h4>
-<div class="outline-text-4" id="text-org538d74b">
+<div id="outline-container-org0bb6bd8" class="outline-4">
+<h4 id="org0bb6bd8">算符文法</h4>
+<div class="outline-text-4" id="text-org0bb6bd8">
 <p>
 若一个文法中不含有形如 U-&gt;&#x2026;AB&#x2026; 的产生式时，称为算符文法。
 </p>
 </div>
 </div>
-<div id="outline-container-org25736e1" class="outline-4">
-<h4 id="org25736e1">算符优先文法</h4>
-<div class="outline-text-4" id="text-org25736e1">
+<div id="outline-container-orgd9201a1" class="outline-4">
+<h4 id="orgd9201a1">算符优先文法</h4>
+<div class="outline-text-4" id="text-orgd9201a1">
 <p>
 任何一对终结符之间至多只有一种优先关系的算符文法。
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="orgd95cc75"></a>素短语<br />
-<div class="outline-text-5" id="text-orgd95cc75">
+<div id="outline-container-org119871a" class="outline-5">
+<h5 id="org119871a">素短语</h5>
+<div class="outline-text-5" id="text-org119871a">
 <p>
 至少含有一个终结符，并且本身不再含有其它素短语。
 </p>
 </div>
-</li>
-</ul>
 </div>
 </div>
-<div id="outline-container-org95db4df" class="outline-3">
-<h3 id="org95db4df">LR(k)分析法</h3>
-<div class="outline-text-3" id="text-org95db4df">
+</div>
+<div id="outline-container-orgdfbccf4" class="outline-3">
+<h3 id="orgdfbccf4">LR(k)分析法</h3>
+<div class="outline-text-3" id="text-orgdfbccf4">
 <p>
 LR(k)分析法是一种自左向右自底向上的规范规约分析法。
 </p>
@@ -567,17 +565,17 @@ LR(k)分析法是一种自左向右自底向上的规范规约分析法。
 </div>
 </div>
 </div>
-<div id="outline-container-orgf36bfd1" class="outline-2">
-<h2 id="orgf36bfd1">属性文法和语法制导翻译</h2>
-<div class="outline-text-2" id="text-orgf36bfd1">
+<div id="outline-container-orgf7e4ca0" class="outline-2">
+<h2 id="orgf7e4ca0">属性文法和语法制导翻译</h2>
+<div class="outline-text-2" id="text-orgf7e4ca0">
 </div>
-<div id="outline-container-orgb71755b" class="outline-3">
-<h3 id="orgb71755b">属性文法</h3>
-<div class="outline-text-3" id="text-orgb71755b">
+<div id="outline-container-orgf97f4a1" class="outline-3">
+<h3 id="orgf97f4a1">属性文法</h3>
+<div class="outline-text-3" id="text-orgf97f4a1">
 </div>
-<div id="outline-container-orgd3e3d89" class="outline-4">
-<h4 id="orgd3e3d89">属性分类</h4>
-<div class="outline-text-4" id="text-orgd3e3d89">
+<div id="outline-container-orgafe6507" class="outline-4">
+<h4 id="orgafe6507">属性分类</h4>
+<div class="outline-text-4" id="text-orgafe6507">
 <ul class="org-ul">
 <li>综合属性：用于自下而上传递消息；</li>
 <li>继承属性：用于自上而下传递消息；</li>
@@ -585,9 +583,9 @@ LR(k)分析法是一种自左向右自底向上的规范规约分析法。
 </div>
 </div>
 </div>
-<div id="outline-container-org9e240b6" class="outline-3">
-<h3 id="org9e240b6">基于属性文法的处理方法</h3>
-<div class="outline-text-3" id="text-org9e240b6">
+<div id="outline-container-orgef0226a" class="outline-3">
+<h3 id="orgef0226a">基于属性文法的处理方法</h3>
+<div class="outline-text-3" id="text-orgef0226a">
 <p>
 <b>语法制导翻译过程</b>
 </p>
@@ -598,35 +596,35 @@ LR(k)分析法是一种自左向右自底向上的规范规约分析法。
 <li>语义规则计算；</li>
 </ol>
 </div>
-<div id="outline-container-org1c12a4e" class="outline-4">
-<h4 id="org1c12a4e">良定义文法</h4>
-<div class="outline-text-4" id="text-org1c12a4e">
+<div id="outline-container-org07c6f8d" class="outline-4">
+<h4 id="org07c6f8d">良定义文法</h4>
+<div class="outline-text-4" id="text-org07c6f8d">
 <p>
 如果一文法的任一语法树的依赖图中无循环，则该文法是良定义的。
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org31e6074" class="outline-3">
-<h3 id="org31e6074">S属性文法的自下而上计算</h3>
-<div class="outline-text-3" id="text-org31e6074">
+<div id="outline-container-org16fa4df" class="outline-3">
+<h3 id="org16fa4df">S属性文法的自下而上计算</h3>
+<div class="outline-text-3" id="text-org16fa4df">
 </div>
-<div id="outline-container-orgab6a2a4" class="outline-4">
-<h4 id="orgab6a2a4">S属性文法</h4>
-<div class="outline-text-4" id="text-orgab6a2a4">
+<div id="outline-container-org6564543" class="outline-4">
+<h4 id="org6564543">S属性文法</h4>
+<div class="outline-text-4" id="text-org6564543">
 <p>
 文法中符号的属性只是综合属性。
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org8c3f65f" class="outline-3">
-<h3 id="org8c3f65f">L属性文法和自顶向下翻译</h3>
-<div class="outline-text-3" id="text-org8c3f65f">
+<div id="outline-container-org5ad249a" class="outline-3">
+<h3 id="org5ad249a">L属性文法和自顶向下翻译</h3>
+<div class="outline-text-3" id="text-org5ad249a">
 </div>
-<div id="outline-container-orgb7f00bc" class="outline-4">
-<h4 id="orgb7f00bc">L属性文法</h4>
-<div class="outline-text-4" id="text-orgb7f00bc">
+<div id="outline-container-org87b7f14" class="outline-4">
+<h4 id="org87b7f14">L属性文法</h4>
+<div class="outline-text-4" id="text-org87b7f14">
 <p>
 对于文法中每个产生式
  A-&gt;X<sub>1</sub> X<sub>2</sub> X<sub>3</sub> &#x2026; X<sub>n</sub> ,X<sub>j</sub> (1 &le; j &le; n) 
@@ -638,54 +636,54 @@ X<sub>j</sub> 的继承属性仅依赖于：
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf2cfb0e" class="outline-4">
-<h4 id="orgf2cfb0e">翻译模式</h4>
+<div id="outline-container-org37881c2" class="outline-4">
+<h4 id="org37881c2">翻译模式</h4>
 </div>
-<div id="outline-container-orga48a043" class="outline-4">
-<h4 id="orga48a043">自顶向下翻译</h4>
-<div class="outline-text-4" id="text-orga48a043">
+<div id="outline-container-org07b6155" class="outline-4">
+<h4 id="org07b6155">自顶向下翻译</h4>
+<div class="outline-text-4" id="text-org07b6155">
 <hr />
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org25838b7" class="outline-2">
-<h2 id="org25838b7">语义分析和中间代码产生</h2>
-<div class="outline-text-2" id="text-org25838b7">
+<div id="outline-container-org77a2002" class="outline-2">
+<h2 id="org77a2002">语义分析和中间代码产生</h2>
+<div class="outline-text-2" id="text-org77a2002">
 </div>
-<div id="outline-container-orgdb09a36" class="outline-3">
-<h3 id="orgdb09a36">中间代码</h3>
-<div class="outline-text-3" id="text-orgdb09a36">
+<div id="outline-container-org8018d35" class="outline-3">
+<h3 id="org8018d35">中间代码</h3>
+<div class="outline-text-3" id="text-org8018d35">
 </div>
-<div id="outline-container-org7ea50bc" class="outline-4">
-<h4 id="org7ea50bc">三元式</h4>
+<div id="outline-container-orgff0e159" class="outline-4">
+<h4 id="orgff0e159">三元式</h4>
 </div>
-<div id="outline-container-orgfdcb013" class="outline-4">
-<h4 id="orgfdcb013">四元式</h4>
+<div id="outline-container-orgf419315" class="outline-4">
+<h4 id="orgf419315">四元式</h4>
 </div>
 </div>
-<div id="outline-container-org005ff63" class="outline-3">
-<h3 id="org005ff63">赋值语句到四元式的翻译</h3>
+<div id="outline-container-orgff176e7" class="outline-3">
+<h3 id="orgff176e7">赋值语句到四元式的翻译</h3>
 </div>
-<div id="outline-container-org2616914" class="outline-3">
-<h3 id="org2616914">布尔表达式的翻译</h3>
+<div id="outline-container-orgd683509" class="outline-3">
+<h3 id="orgd683509">布尔表达式的翻译</h3>
 </div>
-<div id="outline-container-orgf7316f9" class="outline-3">
-<h3 id="orgf7316f9">控制语句的翻译</h3>
+<div id="outline-container-org3cd887d" class="outline-3">
+<h3 id="org3cd887d">控制语句的翻译</h3>
 </div>
-<div id="outline-container-orgff30267" class="outline-3">
-<h3 id="orgff30267">数组元素的引用</h3>
+<div id="outline-container-orgb32f62b" class="outline-3">
+<h3 id="orgb32f62b">数组元素的引用</h3>
 </div>
-<div id="outline-container-orgda1d715" class="outline-3">
-<h3 id="orgda1d715">过程调用</h3>
-<div class="outline-text-3" id="text-orgda1d715">
+<div id="outline-container-orgbae0cc8" class="outline-3">
+<h3 id="orgbae0cc8">过程调用</h3>
+<div class="outline-text-3" id="text-orgbae0cc8">
 <hr />
 </div>
 </div>
 </div>
-<div id="outline-container-orgd1f0da8" class="outline-2">
-<h2 id="orgd1f0da8">代码优化</h2>
-<div class="outline-text-2" id="text-orgd1f0da8">
+<div id="outline-container-org3228be4" class="outline-2">
+<h2 id="org3228be4">代码优化</h2>
+<div class="outline-text-2" id="text-org3228be4">
 <p>
 <b>定义</b>:对程序实施各种等价变换，使得变换后程序能生成高效率的目标代码。
 <b>高效率的目标代码</b>:
@@ -695,17 +693,17 @@ X<sub>j</sub> 的继承属性仅依赖于：
 <li>运行时间短；</li>
 </ol>
 </div>
-<div id="outline-container-org8662f3c" class="outline-3">
-<h3 id="org8662f3c">分类</h3>
-<div class="outline-text-3" id="text-org8662f3c">
+<div id="outline-container-org029ed50" class="outline-3">
+<h3 id="org029ed50">分类</h3>
+<div class="outline-text-3" id="text-org029ed50">
 </div>
-<div id="outline-container-orga57de30" class="outline-4">
-<h4 id="orga57de30">根据是否涉及 <i>具体计算机</i></h4>
-<div class="outline-text-4" id="text-orga57de30">
+<div id="outline-container-orgc41325a" class="outline-4">
+<h4 id="orgc41325a">根据是否涉及 <i>具体计算机</i></h4>
+<div class="outline-text-4" id="text-orgc41325a">
 </div>
-<ul class="org-ul">
-<li><a id="org58ae99b"></a>与机器有关的优化<br />
-<div class="outline-text-5" id="text-org58ae99b">
+<div id="outline-container-orgdc84a1d" class="outline-5">
+<h5 id="orgdc84a1d">与机器有关的优化</h5>
+<div class="outline-text-5" id="text-orgdc84a1d">
 <p>
 (优化工作主要在目标代码级上进行)
 </p>
@@ -715,23 +713,23 @@ X<sub>j</sub> 的继承属性仅依赖于：
 <li>特殊指令的优化</li>
 </ul>
 </div>
-</li>
-<li><a id="org788eac7"></a>与机器无关的优化<br />
-<div class="outline-text-5" id="text-org788eac7">
+</div>
+<div id="outline-container-orgb2dd33a" class="outline-5">
+<h5 id="orgb2dd33a">与机器无关的优化</h5>
+<div class="outline-text-5" id="text-orgb2dd33a">
 <p>
 (优化工作主要在中间代码级上进行)
 </p>
 </div>
-</li>
-</ul>
 </div>
-<div id="outline-container-org067532a" class="outline-4">
-<h4 id="org067532a">根据优化对象所涉及的 <i>程序范围</i></h4>
-<div class="outline-text-4" id="text-org067532a">
 </div>
-<ul class="org-ul">
-<li><a id="org03104a9"></a>局部优化<br />
-<div class="outline-text-5" id="text-org03104a9">
+<div id="outline-container-org0a6331d" class="outline-4">
+<h4 id="org0a6331d">根据优化对象所涉及的 <i>程序范围</i></h4>
+<div class="outline-text-4" id="text-org0a6331d">
+</div>
+<div id="outline-container-orgce8177b" class="outline-5">
+<h5 id="orgce8177b">局部优化</h5>
+<div class="outline-text-5" id="text-orgce8177b">
 <p>
 局限于程序基本块范围内的一种优化，包括：
 </p>
@@ -741,9 +739,10 @@ X<sub>j</sub> 的继承属性仅依赖于：
 <li>删除无用赋值</li>
 </ul>
 </div>
-</li>
-<li><a id="orga3e5465"></a>循环优化<br />
-<div class="outline-text-5" id="text-orga3e5465">
+</div>
+<div id="outline-container-orgb8d14e2" class="outline-5">
+<h5 id="orgb8d14e2">循环优化</h5>
+<div class="outline-text-5" id="text-orgb8d14e2">
 <p>
 对循环中代码进行优化，包括：
 </p>
@@ -753,37 +752,38 @@ X<sub>j</sub> 的继承属性仅依赖于：
 <li>强度削弱</li>
 </ul>
 </div>
-</li>
-<li><a id="orgec1559b"></a>全局优化<br />
-<div class="outline-text-5" id="text-orgec1559b">
+</div>
+<div id="outline-container-orgcac348a" class="outline-5">
+<h5 id="orgcac348a">全局优化</h5>
+<div class="outline-text-5" id="text-orgcac348a">
 <p>
 在整个程序范围内进行的优化，需要进行数据流分析，花费代价高。
 </p>
 </div>
-</li>
-</ul>
 </div>
-<div id="outline-container-orgaffe4df" class="outline-4">
-<h4 id="orgaffe4df">使用DAG实现局部优化</h4>
-<div class="outline-text-4" id="text-orgaffe4df">
 </div>
-<ul class="org-ul">
-<li><a id="orgbd2d947"></a>基本块<br />
-<div class="outline-text-5" id="text-orgbd2d947">
+<div id="outline-container-org4db4868" class="outline-4">
+<h4 id="org4db4868">使用DAG实现局部优化</h4>
+<div class="outline-text-4" id="text-org4db4868">
+</div>
+<div id="outline-container-org27fa683" class="outline-5">
+<h5 id="org27fa683">基本块</h5>
+<div class="outline-text-5" id="text-org27fa683">
 <p>
 指程序中一组顺序执行的语句序列，其中只有一个入口语句和出口语句。
 </p>
 </div>
-</li>
-<li><a id="orgc8343eb"></a>划分基本块的方法<br />
-<div class="outline-text-5" id="text-orgc8343eb">
+</div>
+<div id="outline-container-org7c5ee7c" class="outline-5">
+<h5 id="org7c5ee7c">划分基本块的方法</h5>
+<div class="outline-text-5" id="text-org7c5ee7c">
 <p>
 入口语句和出口语句之间组成一个基本块。
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orgc37e3cb"></a>确定基本块入口语句<br />
-<div class="outline-text-6" id="text-orgc37e3cb">
+<li><a id="orgc2f338e"></a>确定基本块入口语句<br />
+<div class="outline-text-6" id="text-orgc2f338e">
 <ol class="org-ol">
 <li>四元式序列的第一个语句；</li>
 <li>由条件转移语句或无条件转移语句转移到的语句；</li>
@@ -791,8 +791,8 @@ X<sub>j</sub> 的继承属性仅依赖于：
 </ol>
 </div>
 </li>
-<li><a id="orge5f5e1d"></a>确定基本块出口语句<br />
-<div class="outline-text-6" id="text-orge5f5e1d">
+<li><a id="org97e73ea"></a>确定基本块出口语句<br />
+<div class="outline-text-6" id="text-org97e73ea">
 <ol class="org-ol">
 <li>下一个入口语句的前导语句；</li>
 <li>转移语句（包含本身）；</li>
@@ -801,12 +801,11 @@ X<sub>j</sub> 的继承属性仅依赖于：
 </div>
 </li>
 </ul>
-</li>
-</ul>
 </div>
-<div id="outline-container-org1d29aa5" class="outline-4">
-<h4 id="org1d29aa5">循环查找</h4>
-<div class="outline-text-4" id="text-org1d29aa5">
+</div>
+<div id="outline-container-org5ec0fb9" class="outline-4">
+<h4 id="org5ec0fb9">循环查找</h4>
+<div class="outline-text-4" id="text-org5ec0fb9">
 <ol class="org-ol">
 <li>求流图中所有节点的必经节点；</li>
 <li>求流图中的 <b>回边</b> ；</li>
@@ -817,17 +816,17 @@ X<sub>j</sub> 的继承属性仅依赖于：
 </div>
 </div>
 </div>
-<div id="outline-container-orge469809" class="outline-2">
-<h2 id="orge469809">运行时存储空间组织</h2>
-<div class="outline-text-2" id="text-orge469809">
+<div id="outline-container-org61579aa" class="outline-2">
+<h2 id="org61579aa">运行时存储空间组织</h2>
+<div class="outline-text-2" id="text-org61579aa">
 </div>
-<div id="outline-container-orgf5552b0" class="outline-3">
-<h3 id="orgf5552b0">静态存储管理 FORTRAN存储分配</h3>
-<div class="outline-text-3" id="text-orgf5552b0">
+<div id="outline-container-org711c283" class="outline-3">
+<h3 id="org711c283">静态存储管理 FORTRAN存储分配</h3>
+<div class="outline-text-3" id="text-org711c283">
 </div>
-<div id="outline-container-orgb7d300d" class="outline-4">
-<h4 id="orgb7d300d">FORTRAN程序的特点</h4>
-<div class="outline-text-4" id="text-orgb7d300d">
+<div id="outline-container-orgc651e64" class="outline-4">
+<h4 id="orgc651e64">FORTRAN程序的特点</h4>
+<div class="outline-text-4" id="text-orgc651e64">
 <ul class="org-ul">
 <li>不允许过程的递归性；</li>
 <li>每一个数据名的性质完全确定；</li>
@@ -835,22 +834,22 @@ X<sub>j</sub> 的继承属性仅依赖于：
 </ul>
 </div>
 </div>
-<div id="outline-container-orgacb5872" class="outline-4">
-<h4 id="orgacb5872">结论</h4>
-<div class="outline-text-4" id="text-orgacb5872">
+<div id="outline-container-org368ddc2" class="outline-4">
+<h4 id="org368ddc2">结论</h4>
+<div class="outline-text-4" id="text-org368ddc2">
 <p>
 整个程序所需数据空间大小、位置在编译时是完全可以确定的。
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgc83cac7" class="outline-3">
-<h3 id="orgc83cac7">简单栈式存储分配（动态）C语言</h3>
-<div class="outline-text-3" id="text-orgc83cac7">
+<div id="outline-container-orgcdbe206" class="outline-3">
+<h3 id="orgcdbe206">简单栈式存储分配（动态）C语言</h3>
+<div class="outline-text-3" id="text-orgcdbe206">
 </div>
-<div id="outline-container-org11f0c38" class="outline-4">
-<h4 id="org11f0c38">要求</h4>
-<div class="outline-text-4" id="text-org11f0c38">
+<div id="outline-container-orgd1863b2" class="outline-4">
+<h4 id="orgd1863b2">要求</h4>
+<div class="outline-text-4" id="text-orgd1863b2">
 <ul class="org-ul">
 <li>无分程序结构；</li>
 <li>过程定义无嵌套，但允许过程递归调用；</li>
@@ -859,9 +858,9 @@ X<sub>j</sub> 的继承属性仅依赖于：
 </div>
 </div>
 </div>
-<div id="outline-container-orgebef4ed" class="outline-3">
-<h3 id="orgebef4ed">堆式动态分配策略</h3>
-<div class="outline-text-3" id="text-orgebef4ed">
+<div id="outline-container-org3bacca2" class="outline-3">
+<h3 id="org3bacca2">堆式动态分配策略</h3>
+<div class="outline-text-3" id="text-org3bacca2">
 <p>
 在栈式动态分配的要求上增加：
 </p>
