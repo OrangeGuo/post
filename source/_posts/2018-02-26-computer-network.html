@@ -46,8 +46,8 @@ comments:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb29d0dc" class="outline-4">
-<h4 id="orgb29d0dc"><span class="section-number-4">1.1.4</span> 组成</h4>
+<div id="outline-container-orgca68b6e" class="outline-4">
+<h4 id="orgca68b6e"><span class="section-number-4">1.1.4</span> 组成</h4>
 <div class="outline-text-4" id="text-1-1-4">
 </div>
 <ol class="org-ol">
@@ -186,8 +186,8 @@ comments:
 <h3 id="org76245c3"><span class="section-number-3">1.2</span> 因特网</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-orgbb2adab" class="outline-4">
-<h4 id="orgbb2adab"><span class="section-number-4">1.2.1</span> 组成</h4>
+<div id="outline-container-org4c7b337" class="outline-4">
+<h4 id="org4c7b337"><span class="section-number-4">1.2.1</span> 组成</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <ol class="org-ol">
 <li>因特网边缘</li>
@@ -196,8 +196,8 @@ comments:
 </ol>
 </div>
 </div>
-<div id="outline-container-org831f6f4" class="outline-4">
-<h4 id="org831f6f4"><span class="section-number-4">1.2.2</span> 特点</h4>
+<div id="outline-container-org0784bbe" class="outline-4">
+<h4 id="org0784bbe"><span class="section-number-4">1.2.2</span> 特点</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <p>
 <b>边缘复杂，核心简单</b> ：遵循“端到端”的原则，即将复杂的网络处理功能置于因特网边缘，而将相对简单的分组交付功能放在因特网核心。
@@ -243,7 +243,7 @@ comments:
 </li>
 <li><a id="org5b99b42"></a>P2P体系结构（P2P模式）<br />
 <ol class="org-ol">
-<li><a id="org29e2130"></a>特点<br />
+<li><a id="org6b1a5e6"></a>特点<br />
 <div class="outline-text-6" id="text-1-2-4-2-1">
 <ol class="org-ol">
 <li>能够借助对等方的空闲资源而不需要庞大的服务器基础设施的支持，从而降低服务提供商成本</li>
@@ -433,7 +433,7 @@ comments:
 
 <li><a id="org7897127"></a>TCP/IP体系结构<br />
 <ol class="org-ol">
-<li><a id="org992d366"></a>特点<br />
+<li><a id="orgd84250b"></a>特点<br />
 <div class="outline-text-6" id="text-1-3-4-2-1">
 <ol class="org-ol">
 <li>协议栈呈“沙漏型”，IP是体系结构的“细腰”，代表最小的、精选的通用功能集，能够使高层应用与底层通信网技术独立发展</li>
@@ -511,7 +511,7 @@ comments:
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="orgf261c28"></a>组成<br />
+<li><a id="org5828e24"></a>组成<br />
 <div class="outline-text-5" id="text-2-1-1-1">
 <p>
 信源，发送设备，信道，接收设备，信宿
@@ -1137,6 +1137,113 @@ CMDA中将每一个比特时间再划分为m比特的序列，称为 <b>码片</
 采用CMSA/CA协议，并用RTS和CTS帧进行信道预约， <b>用短预约分组尝试预约信道，避免长数据
 帧的碰撞，提高了协议效率</b>
 </p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb2f3130" class="outline-2">
+<h2 id="orgb2f3130"><span class="section-number-2">4</span> 网络互联</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6aa76f5" class="outline-3">
+<h3 id="org6aa76f5"><span class="section-number-3">4.1</span> 网络层概述</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+网络层利用直接连接的网络向上层所提供的链路层服务，基于本层协议，提供了 <b>将分组从网络
+一侧的主机传输到网络另一侧的主机的端到端通信服务</b>
+</p>
+</div>
+<div id="outline-container-orgcebc072" class="outline-4">
+<h4 id="orgcebc072"><span class="section-number-4">4.1.1</span> 异构网络互联方法</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+在体系结构和通信协议方面具有很大的差异的计算机网络，称为 <b>异构网络</b>
+</p>
+
+<p>
+<b>异构网络的互联方法</b>
+</p>
+<ol class="org-ol">
+<li>两两互联</li>
+<li>与中立的中继系统互联</li>
+</ol>
+
+<p>
+<b>因特网采用了一种与机器无关、操作系统无关、语言无关的中继系统（IP系统）方式来解决异
+ 构网络互联问题</b>
+</p>
+<ol class="org-ol">
+<li>IP网络具有统一的协议和地址，IP地址标识了主机在网络中的位置，为分组全局性寻址和路
+由选择，进而实现网络互联互通提供了可能</li>
+<li>IP网络是虚拟网络，为分组提供全局性路由选择和转发功能，分组的实际传输交付功能却要
+由下面的通信网络提供</li>
+<li>连接各个异构网络的设备是路由器，最高层次是网络层，至少有两个与不同网络连接的接口。
+全局性路由选择和转发分组功能由路由器实际完成</li>
+<li>端系统位于网络路径两侧的端点，具有协议栈的所有层次。在端系统和沿路径各路由器网络
+层的共同作用下，才形成了主机到主机的端到端路径</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org96ca75f" class="outline-4">
+<h4 id="org96ca75f"><span class="section-number-4">4.1.2</span> 关键的网络层功能</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+<b>转发</b> 将分组从路由器的输入移动到适当的路由器输出
+</p>
+
+<p>
+<b>选路</b> 决定分组从源到目的地所采用的路由 <b>路由选择算法</b>
+</p>
+
+<p>
+<b>路由</b> 分组从源到目的地所经过的端到端路径
+</p>
+</div>
+</div>
+<div id="outline-container-org9917047" class="outline-4">
+<h4 id="org9917047"><span class="section-number-4">4.1.3</span> 分组直接交付和间接交付</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+当源主机和目的主机位于同一个直接连接的网络上时，分组从一台源主机直接传输到另一台目的
+主机的过程称为 <b>直接交付</b>
+</p>
+
+<p>
+当目的主机不与源主机在一个直接连接的网络上时，源主机必须先把分组发给一台路由器，由路
+由器进行后继处理，然后才能把分组交付给目的主机，这个过程称为 <b>间接交付</b>
+</p>
+
+<p>
+<b>分组转发算法</b>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org970b439" class="outline-3">
+<h3 id="org970b439"><span class="section-number-3">4.2</span> 网络服务模型</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+仅在网络层提供连接服务的计算机网络被称为 <b>虚电路网络</b> ；仅在网络层提供无连接服务的计
+算机网络被称为 <b>数据报网络</b>
+</p>
+</div>
+<div id="outline-container-org29d5d30" class="outline-4">
+<h4 id="org29d5d30"><span class="section-number-4">4.2.1</span> 数据报格式</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<p>
+<b>最大传送单元</b> 一个链路层帧能承受的最大数据量为MTU，当数据报长度超过MTU时需要进行
+ <b>IP分片</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org4f35a15" class="outline-4">
+<h4 id="org4f35a15"><span class="section-number-4">4.2.2</span> IP编址</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ol class="org-ol">
+<li>分类IP地址</li>
+<li>子网划分</li>
+<li>构成超网（无分类编址方法）</li>
+</ol>
 </div>
 </div>
 </div>
