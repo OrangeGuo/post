@@ -1,0 +1,27 @@
+#+TITLE: java-web
+#+DATE: 2018-04-11
+#+SETUPFILE: ~/blog/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: javaWeb 
+#+JEKYLL_TAGS: java
+#+JEKYLL_PUBLISHED: true
+
+* JavaEE 三层结构 
+1. web层 视图层 struct2框架
+2. service层 业务逻辑层 spring框架
+3. dao层 hibernate框架 对数据库进行crud操作（增删改查）
+** MVC分层思想
+* hibernate框架概述
+1. 对jdbc进行封装
+2. 开源轻量级框架
+3. 应用在javaEE的dao层
+** ORM思想
+即对象关系映射
+1. 让实体类（javabean的别名）和数据库进行一一对应：实体类和数据库表对应；实体类属性
+   和表里字段对应
+2. 不需要直接操作数据库表，而操作表对应实体类对象
+** 搭建hibernate环境
+1. 导入hibernate框架jar包，以及日志输出和数据库驱动jar包
+2. 创建实体类（实体类必须包含一个唯一属性）
+3. 配置实体类和数据库表一一对应关系（映射）
+4. 创建hibernate核心配置文件
