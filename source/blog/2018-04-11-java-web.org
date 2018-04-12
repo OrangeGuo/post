@@ -11,7 +11,7 @@
 2. service层 业务逻辑层 spring框架
 3. dao层 hibernate框架 对数据库进行crud操作（增删改查）
 ** MVC分层思想
-* hibernate框架概述
+* hibernate框架
 1. 对jdbc进行封装
 2. 开源轻量级框架
 3. 应用在javaEE的dao层
@@ -25,3 +25,21 @@
 2. 创建实体类（实体类必须包含一个唯一属性）
 3. 配置实体类和数据库表一一对应关系（映射）
 4. 创建hibernate核心配置文件
+* spring框架 
+1. 开源轻量级框架
+2. 一站式框架
+** 核心部分
+*** IOC 控制反转
+两种方式：配置文件方式和注解方式
+
+*底层原理使用技术*
+1. xml配置文件
+2. dom4j解析xml
+3. 工厂设计模式
+4. 反射
+*** AOP 面向切面编程
+** 一站式框架
+spring针对javaee三层结构分别提供不同解决方案
+- web层 springMVC
+- service层 spring的IOC
+- dao层 spring的jdbcTemplate
