@@ -43,3 +43,22 @@ spring针对javaee三层结构分别提供不同解决方案
 - web层 springMVC
 - service层 spring的IOC
 - dao层 spring的jdbcTemplate
+** bean 实例化三种方式实现
+1. 使用类的无参构造创建
+2. 使用静态工厂创建（创建静态方法返回类对象）
+3. 使用实例工厂创建（创建非静态方法返回类对象）
+** 属性输入的三种方式 
+1. set方法
+2. 有参数构造方法
+3. 使用接口注入
+** IOC和DI
+IOC：控制反转，把对象创建交给spring配置
+DI：依赖注入，向类里面属性设置值
+关系：DI不能单调操作，必须在IOC基础上完成操作
+** spring整合web项目原理 
+1. 加载spring核心配置文件（要new对象，功能可以实现，但效率低）
+2. 优化思路：把加载配置文件和创建对象过程，放在服务器启动时候完成
+3. 实现原理：ServletContext对象，监听器。在服务器启动时，为每个项目创建一个
+   ServletContext对象，使用监听器可以监听对象创建时间，然后就加载spring配置文件，创
+   建配置文件配置对象。把创建的对象放到ServletContext域对象里（setAttribute方法），
+   获取对象时候，到ServletContext域中获取（getAtrribute方法）

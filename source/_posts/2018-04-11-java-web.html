@@ -104,4 +104,47 @@ spring针对javaee三层结构分别提供不同解决方案
 </ul>
 </div>
 </div>
+<div id="outline-container-orgd0f378e" class="outline-3">
+<h3 id="orgd0f378e"><span class="section-number-3">3.3</span> bean 实例化三种方式实现</h3>
+<div class="outline-text-3" id="text-3-3">
+<ol class="org-ol">
+<li>使用类的无参构造创建</li>
+<li>使用静态工厂创建（创建静态方法返回类对象）</li>
+<li>使用实例工厂创建（创建非静态方法返回类对象）</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgecffdce" class="outline-3">
+<h3 id="orgecffdce"><span class="section-number-3">3.4</span> 属性输入的三种方式</h3>
+<div class="outline-text-3" id="text-3-4">
+<ol class="org-ol">
+<li>set方法</li>
+<li>有参数构造方法</li>
+<li>使用接口注入</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org73d2f45" class="outline-3">
+<h3 id="org73d2f45"><span class="section-number-3">3.5</span> IOC和DI</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+IOC：控制反转，把对象创建交给spring配置
+DI：依赖注入，向类里面属性设置值
+关系：DI不能单调操作，必须在IOC基础上完成操作
+</p>
+</div>
+</div>
+<div id="outline-container-org534984d" class="outline-3">
+<h3 id="org534984d"><span class="section-number-3">3.6</span> spring整合web项目原理</h3>
+<div class="outline-text-3" id="text-3-6">
+<ol class="org-ol">
+<li>加载spring核心配置文件（要new对象，功能可以实现，但效率低）</li>
+<li>优化思路：把加载配置文件和创建对象过程，放在服务器启动时候完成</li>
+<li>实现原理：ServletContext对象，监听器。在服务器启动时，为每个项目创建一个
+ServletContext对象，使用监听器可以监听对象创建时间，然后就加载spring配置文件，创
+建配置文件配置对象。把创建的对象放到ServletContext域对象里（setAttribute方法），
+获取对象时候，到ServletContext域中获取（getAtrribute方法）</li>
+</ol>
+</div>
+</div>
 </div>
