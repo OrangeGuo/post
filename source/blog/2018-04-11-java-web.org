@@ -62,3 +62,5 @@ DI：依赖注入，向类里面属性设置值
    ServletContext对象，使用监听器可以监听对象创建时间，然后就加载spring配置文件，创
    建配置文件配置对象。把创建的对象放到ServletContext域对象里（setAttribute方法），
    获取对象时候，到ServletContext域中获取（getAtrribute方法）
+** AOP 
+面向切面编程，实现拓展功能不修改源代码。采用 *横向抽取机制* ，取代传统纵向继承体系重复性代码。
