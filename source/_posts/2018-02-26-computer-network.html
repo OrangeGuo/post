@@ -46,8 +46,8 @@ comments:
 </ul>
 </div>
 </div>
-<div id="outline-container-org7edd56d" class="outline-4">
-<h4 id="org7edd56d"><span class="section-number-4">1.1.4</span> 组成</h4>
+<div id="outline-container-org6616218" class="outline-4">
+<h4 id="org6616218"><span class="section-number-4">1.1.4</span> 组成</h4>
 <div class="outline-text-4" id="text-1-1-4">
 </div>
 <ol class="org-ol">
@@ -186,8 +186,8 @@ comments:
 <h3 id="org76245c3"><span class="section-number-3">1.2</span> 因特网</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-orge1579c4" class="outline-4">
-<h4 id="orge1579c4"><span class="section-number-4">1.2.1</span> 组成</h4>
+<div id="outline-container-org34f9170" class="outline-4">
+<h4 id="org34f9170"><span class="section-number-4">1.2.1</span> 组成</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <ol class="org-ol">
 <li>因特网边缘</li>
@@ -196,8 +196,8 @@ comments:
 </ol>
 </div>
 </div>
-<div id="outline-container-org223a990" class="outline-4">
-<h4 id="org223a990"><span class="section-number-4">1.2.2</span> 特点</h4>
+<div id="outline-container-org4407a2e" class="outline-4">
+<h4 id="org4407a2e"><span class="section-number-4">1.2.2</span> 特点</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <p>
 <b>边缘复杂，核心简单</b> ：遵循“端到端”的原则，即将复杂的网络处理功能置于因特网边缘，而将相对简单的分组交付功能放在因特网核心。
@@ -243,7 +243,7 @@ comments:
 </li>
 <li><a id="org5b99b42"></a>P2P体系结构（P2P模式）<br />
 <ol class="org-ol">
-<li><a id="org9c703cb"></a>特点<br />
+<li><a id="orgb970cb0"></a>特点<br />
 <div class="outline-text-6" id="text-1-2-4-2-1">
 <ol class="org-ol">
 <li>能够借助对等方的空闲资源而不需要庞大的服务器基础设施的支持，从而降低服务提供商成本</li>
@@ -433,7 +433,7 @@ comments:
 
 <li><a id="org7897127"></a>TCP/IP体系结构<br />
 <ol class="org-ol">
-<li><a id="org4407a2e"></a>特点<br />
+<li><a id="orgf48ccab"></a>特点<br />
 <div class="outline-text-6" id="text-1-3-4-2-1">
 <ol class="org-ol">
 <li>协议栈呈“沙漏型”，IP是体系结构的“细腰”，代表最小的、精选的通用功能集，能够使高层应用与底层通信网技术独立发展</li>
@@ -511,7 +511,7 @@ comments:
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org6616218"></a>组成<br />
+<li><a id="org3797bc5"></a>组成<br />
 <div class="outline-text-5" id="text-2-1-1-1">
 <p>
 信源，发送设备，信道，接收设备，信宿
@@ -1350,6 +1350,73 @@ IP网络中使用得最早、应用最广泛的AS内部路由选择协议。 <b>
 
 <p>
 <i>Dijkstra算法</i>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9d07517" class="outline-3">
+<h3 id="org9d07517"><span class="section-number-3">4.4</span> 路由器工作原理</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org598cbf5" class="outline-4">
+<h4 id="org598cbf5"><span class="section-number-4">4.4.1</span> 两个提高效率的方法</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<p>
+查表和转发
+</p>
+</div>
+</div>
+<div id="outline-container-orged37402" class="outline-4">
+<h4 id="orged37402"><span class="section-number-4">4.4.2</span> 转发和路由选择</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<p>
+<b>转发</b> 路由器根据转发表将用户的IP数据报从合适的端口发出去。 <b>路由选择</b> 按照分布式算
+ 法根据从各相邻路由器得到的关于网络拓扑的变化情况，动态地改变所选择的路由。 <b>路由表</b>
+ 是根据路由选择算法得出来的， <b>转发表</b> 是从路由表得出的。
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org8266bc7" class="outline-2">
+<h2 id="org8266bc7"><span class="section-number-2">5</span> 运输层</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+从通信和信息处理角度看，运输层向上面的应用层提供通信服务，属于面向通信部分的最高层，
+也是用户功能中的最低层。作用是复用和分用。
+</p>
+</div>
+<div id="outline-container-orgdd105d9" class="outline-3">
+<h3 id="orgdd105d9"><span class="section-number-3">5.1</span> 运输层的主要功能</h3>
+<div class="outline-text-3" id="text-5-1">
+<ol class="org-ol">
+<li>为应用进程间提供逻辑通信</li>
+<li>对收到的报文进行差错检测</li>
+<li>有两种不同的通信协议：面向连接的TCP和无连接的UDP</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9c8b24d" class="outline-3">
+<h3 id="org9c8b24d"><span class="section-number-3">5.2</span> TCP和UDP</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+<b>运输协议数据单元TPDU</b> 两个对等运输实体在通信时传送的数据单位。TCP传送的数据单位协议
+ 是 <b>TCP报文段</b> 。UDP传送的数据单位协议是 <b>UDP报文或用户数据报</b> 
+</p>
+</div>
+<div id="outline-container-org337d396" class="outline-4">
+<h4 id="org337d396"><span class="section-number-4">5.2.1</span> UDP</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<p>
+不可靠，无连接，但在某些情况下最有效
+</p>
+</div>
+</div>
+<div id="outline-container-org870f601" class="outline-4">
+<h4 id="org870f601"><span class="section-number-4">5.2.2</span> TCP</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<p>
+面向连接的可靠服务，但开销大
 </p>
 </div>
 </div>
